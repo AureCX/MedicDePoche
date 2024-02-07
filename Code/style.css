@@ -1,8 +1,11 @@
-html {
-  height: 100%;
-  width: 100%;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-<div>
-  <img src="Corps.png" alt="image_corps_page_d-accueil" width="300" height="500" style="display: block; margin: auto;">
-</div>;
+div {
+  text-align: center;
+}
