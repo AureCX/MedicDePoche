@@ -9,3 +9,29 @@ body {
 div {
   text-align: center;
 }
+/* Sélectionne l'élément img avec l'attribut src égal à "Corps.png" */
+img[src="Corps.png"] {
+  /* Affiche l'image comme un bloc */
+  display: block;
+  /* Centre l'image horizontalement */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sélectionne l'élément input avec l'id égal à "input" */
+input#input {
+  /* Affiche l'input comme un bloc */
+  display: block;
+  /* Centre l'input horizontalement */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sélectionne l'élément button avec l'attribut onclick égal à "askQuestion()" */
+button[onclick="askQuestion()"] {
+  /* Affiche le bouton comme un bloc */
+  display: block;
+  /* Centre le bouton horizontalement */
+  margin-left: auto;
+  margin-right: auto;
+}
