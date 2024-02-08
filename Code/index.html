@@ -13,22 +13,32 @@
     // Get the user input from the text box
     var input = document.getElementById("input").value;
     // Check if the input contains some keywords
-    if (input.includes("hello")) {
+    if (input.includes("bonjour")) {
       // Greet the user
-      alert("Hello, how are you?");
-    } else if (input.includes("name")) {
+      alert("Bonjour, comment vas-tu ? Que veux-tu savoir ?");
+    } else if (input.includes("nom")) {
       // Tell the user your name
-      alert("My name is MedicDePoche3000. I'm going to help you with your injuries");
-    } else if (input.includes("time")) {
+      alert("Mon nom es MedicDePoche3000. Je vais suis ici pour vous aider avec vos blessures.");
+    } else if (input.includes("heure")) {
       // Tell the user the current time
       var date = new Date();
       var hours = date.getHours();
       var minutes = date.getMinutes();
-      alert("The time is " + hours + ":" + minutes);
+      alert("Il est " + hours + ":" + minutes);
+    } else if (input.includes("Bonjour")) {
+      alert("Bonjour, comment vas-tu ? Que veux-tu savoir ?");
     } else {
       // Tell the user you don't understand
-      alert("Sorry, I don't understand your question.");
+      alert("Désolé, je n'ai pas compris votre question. Veuillez la reformuler.");
     }
   }
   </script>
+<input type="button" value="Mains" onclick="openFile()">
+<script>
+  function openFile() {
+    window.open("blessures_mains.html", "popup", "width=400,height=400");
+  }
+</script>
+  </style>
+  
 </body>

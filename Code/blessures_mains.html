@@ -1,0 +1,11 @@
+<div id="description"></div>
+<script>
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "blessure_main.txt", true);
+  xhr.onload = function() {
+    if (this.status == 200) {
+      document.getElementById("description").innerHTML = this.responseText;
+    }
+  };
+  xhr.send();
+</script>
