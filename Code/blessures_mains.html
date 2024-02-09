@@ -1,11 +1,51 @@
-<div id="description"></div>
-<script>
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "blessure_main.txt", true);
-  xhr.onload = function() {
-    if (this.status == 200) {
-      document.getElementById("description").innerHTML = this.responseText;
+<body>
+  <div>
+    Veuillez selectionner les symptomes que vous avez : <br>
+
+    1) Coupures et écorchures : Provocées par des objets tranchants tels que couteaux, verre brisé, ou même du papier.<br>
+    <br>
+    2) Brûlures : Peuvent être causées par des objets chauds, des liquides chauds ou des sources de chaleur.<br>
+    <br>
+    3)Fractures : Les os de la main peuvent se fracturer suite à une chute, un coup direct, ou un traumatisme.<br>
+    <br>
+    4)Entorses et foulures : Souvent dues à une torsion excessive ou à une force excessive sur les ligaments ou les muscles.<br>
+    <br>
+    5)Contusions : Blessures causées par un impact direct sur la main, comme des coups ou des chocs.<br>
+    <br>
+    6)Abrasions : Blessures de la peau causées par un frottement contre une surface rugueuse.<br>
+    <br>
+    7)Piqûres et morsures : Les piqûres d'insectes, les piqûres d'aiguilles ou les morsures d'animaux peuvent causer des blessures à la main.<br>
+    <br>
+    8)Infections : Les coupures ou les écorchures non traitées peuvent s'infecter.<br>
+    <br>
+    9)Tendinites : Inflammation des tendons, souvent causée par une surutilisation ou des mouvements répétitifs.<br>
+    <br>
+    10)Syndrome du canal carpien : Une condition où le nerf médian est comprimé au niveau du poignet, provoquant des symptômes tels que douleur, engourdissement et faiblesse dans la main.<br>
+  </div>
+  <h1>Pose moi n'importe quelle question à propos des blessures</h1>
+  <p>Entre ta question ici et clique sur le bouton.</p>
+  <input type="text" id="input" placeholder="Entre ta question ici">
+  <button onclick="askQuestion()">Ask</button>
+  <script>
+    function askQuestion() {
+      // Get the user input from the text box
+      var input = document.getElementById("input").value;
+      // Check if the input contains some keywords
+      if (input.includes("1")) {
+        // Greet the user
+        alert("");
+      } else if (input.includes("2")) {
+        // Tell the user your name
+        alert("");
+      } else if (input.includes("3")) {
+        // Tell the user the current time
+        alert("");
+      } else if (input.includes("")) {
+        alert("");
+      } else {
+        // Tell the user you don't understand
+        alert("Désolé, je n'ai pas compris. Veuillez entrer le numéro qui correspond à vos symptomes");
+      }
     }
-  };
-  xhr.send();
-</script>
+    </script>
+</body>
