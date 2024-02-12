@@ -18,7 +18,7 @@
       alert("Bonjour, comment vas-tu ? Que veux-tu savoir ?");
     } else if (input.includes("nom")) {
       // Tell the user your name
-      alert("Mon nom es MedicDePoche3000. Je vais suis ici pour vous aider avec vos blessures.");
+      alert("Mon nom es MedicDePoche3000. Je suis ici pour vous aider avec vos blessures.");
     } else if (input.includes("heure")) {
       // Tell the user the current time
       var date = new Date();
@@ -36,7 +36,25 @@
 <input type="button" value="Mains" onclick="openFile()">
 <script>
   function openFile() {
-    window.open("blessures_mains.html", "popup", "width=400,height=400");
+    window.open("blessures_mains.html", "popup", "width=600,height=600");
+  }
+</script>
+<input type="button" value="Torse" onclick="openFile()">
+<script>
+  function openFile() {
+    window.open("blessures_torse.html", "popup", "width=600,height=600");
+  }
+</script>
+<input type="button" value="Jambes" onclick="openFile()">
+<script>
+  function openFile() {
+    window.open("blessures_jambes.html", "popup", "width=600,height=600");
+  }
+</script>
+<input type="button" value="Tête" onclick="openFile()">
+<script>
+  function openFile() {
+    window.open("blessures_tete.html", "popup", "width=600,height=600");
   }
 </script>
   </style>
