@@ -1,6 +1,6 @@
 <body>
   <div>
-    Veuillez selectionner les symptomes que vous avez : <br>
+    Veuillez sélectionner les symptômes que vous avez : <br>
 
     <button id="symptom1" onclick="askQuestion(1)">1) Coupures et écorchures : Provoquées par des objets tranchants tels que couteaux, verre brisé, ou même du papier.</button><br>
     <br>
@@ -24,11 +24,41 @@
   </div>
   <script>
     function askQuestion(symptomNumber) {
-      // Check if the input contains some keywords
-      if (symptomNumber) {
-        // Greet the user
-        alert("Vous avez sélectionné le symptôme " + symptomNumber);
+      // Personalized alerts for each symptom
+      switch(symptomNumber) {
+        case 1:
+          alert("Vous avez sélectionné le symptôme 1 : Coupures et écorchures");
+          break;
+        case 2:
+          alert("Vous avez sélectionné le symptôme 2 : Brûlures");
+          break;
+        case 3:
+          alert("Vous avez sélectionné le symptôme 3 : Fractures");
+          break;
+        case 4:
+          alert("Vous avez sélectionné le symptôme 4 : Entorses et foulures");
+          break;
+        case 5:
+          alert("Vous avez sélectionné le symptôme 5 : Contusions");
+          break;
+        case 6:
+          alert("Vous avez sélectionné le symptôme 6 : Abrasions");
+          break;
+        case 7:
+          alert("Vous avez sélectionné le symptôme 7 : Piqûres et morsures");
+          break;
+        case 8:
+          alert("Vous avez sélectionné le symptôme 8 : Infections");
+          break;
+        case 9:
+          alert("Vous avez sélectionné le symptôme 9 : Tendinites");
+          break;
+        case 10:
+          alert("Vous avez sélectionné le symptôme 10 : Syndrome du canal carpien");
+          break;
+        default:
+          alert("Symptôme non reconnu");
       }
-      }
+    }
   </script>
 </body>

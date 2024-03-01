@@ -1,34 +1,50 @@
 <body>
-  <div>
-      Veuillez sélectionner les symptômes que vous avez : <br>
-
-      <button id="symptome1" onclick="askQuestion(1)">1) Commotion cérébrale : Une commotion cérébrale se produit lorsque le cerveau est secoué à l'intérieur du crâne. Cela peut se produire à la suite d'un coup à la tête ou d'une secousse violente. Les symptômes peuvent inclure des maux de tête, des étourdissements, des nausées et une perte de conscience temporaire.</button><br>
-      <br>
-      <button id="symptome2" onclick="askQuestion(2)">2) Hématome : Un hématome à la tête se produit lorsque du sang s'accumule à l'intérieur du crâne. Cela peut résulter d'une blessure ou d'une rupture des vaisseaux sanguins. Les symptômes peuvent inclure des maux de tête sévères, des vomissements, des changements de vision et des troubles de la parole.</button><br>
-      <br>
-      <button id="symptome3" onclick="askQuestion(3)">3) jsp</button><br>
-      <br>
-      <button id="symptome4" onclick="askQuestion(4)">4) jsp</button><br>
-      <br>
-      <button id="symptome5" onclick="askQuestion(5)">5) jsp</button><br>
-      <br>
-      <button id="symptome6" onclick="askQuestion(6)">6) jsp</button><br>
-      <br>
-      <button id="symptome7" onclick="askQuestion(7)">7) jsp</button><br>
-      <br>
-      <button id="symptome8" onclick="askQuestion(8)">8) jsp</button><br>
-      <br>
-      <button id="symptome9" onclick="askQuestion(9)">9) jsp</button><br>
-      <br>
-      <button id="symptome10" onclick="askQuestion(10)">10) Tranchage : Coupure de la tête qui provoque un détachement de la tête par un objet tranchant (couteau, guillotine, hache, scie)</button><br>
-  </div>
-  <script>
-      function askQuestion(symptomNumber) {
-          // Check if the input contains some keywords
-          if (symptomNumber) {
-              // Greet the user
-              alert("Vous avez sélectionné le symptôme " + symptomNumber);
-          }
-      }
-  </script>
-</body>
+    <div>
+        Veuillez sélectionner les symptômes que vous avez : <br>
+  
+        <button id="symptome1" onclick="askQuestion(1)">1) Commotion cérébrale : Une commotion cérébrale se produit lorsque le cerveau est secoué à l'intérieur du crâne. Cela peut se produire à la suite d'un coup à la tête ou d'une secousse violente. Les symptômes peuvent inclure des maux de tête, des étourdissements, des nausées et une perte de conscience temporaire.</button><br>
+        <br>
+        <button id="symptome2" onclick="askQuestion(2)">2) Hématome : Un hématome à la tête se produit lorsque du sang s'accumule à l'intérieur du crâne. Cela peut résulter d'une blessure ou d'une rupture des vaisseaux sanguins. Les symptômes peuvent inclure des maux de tête sévères, des vomissements, des changements de vision et des troubles de la parole.</button><br>
+        <br>
+        <button id="symptome3" onclick="askQuestion(3)">3) Fracture du crâne : Une fracture du crâne se produit lorsque l'os du crâne est cassé. Cela peut entraîner des saignements, un gonflement et des ecchymoses. Les fractures du crâne peuvent également endommager le cerveau, ce qui peut entraîner des symptômes neurologiques.</button><br>
+        <br>
+        <button id="symptome4" onclick="askQuestion(4)">4) Contusion cérébrale : Une contusion cérébrale se produit lorsque le cerveau est contusionné, généralement à la suite d'un impact direct sur la tête. Les symptômes peuvent inclure des maux de tête, des troubles de la vision, des problèmes de coordination et des changements de comportement.</button><br>
+        <br>
+        <button id="symptome5" onclick="askQuestion(5)">5) Lésion du cuir chevelu : Les blessures du cuir chevelu peuvent être superficielles, telles que des coupures ou des écorchures, ou plus graves, impliquant des déchirures de la peau et des tissus sous-jacents.</button><br>
+        <br>
+        <button id="symptome6" onclick="askQuestion(6)">6) Entorse cervicale : Bien que cela concerne davantage le cou, une entorse cervicale peut également entraîner des maux de tête dus à une tension musculaire ou à des lésions des ligaments du cou.</button><br>
+        <br>
+        <button id="symptome7" onclick="askQuestion(7)">7) Tranchage : Coupure de la tête qui provoque un détachement de la tête par un objet tranchant (couteau, guillotine, hache, scie)</button><br>
+    </div>
+    <script>
+        function askQuestion(symptomNumber) {
+            // Personalized alerts for each symptom
+            switch(symptomNumber) {
+                case 1:
+                    alert("Vous avez sélectionné le symptôme 1 : Commotion cérébrale");
+                    break;
+                case 2:
+                    alert("Vous avez sélectionné le symptôme 2 : Hématome");
+                    break;
+                case 3:
+                    alert("Vous avez sélectionné le symptôme 3 : Fracture du crâne");
+                    break;
+                case 4:
+                    alert("Vous avez sélectionné le symptôme 4 : Contusion cérébrale");
+                    break;
+                case 5:
+                    alert("Vous avez sélectionné le symptôme 5 : Lésion du cuir chevelu");
+                    break;
+                case 6:
+                    alert("Vous avez sélectionné le symptôme 6 : Entorse cervicale");
+                    break;
+                case 7:
+                    alert("Vous avez sélectionné le symptôme 7 : Tranchage");
+                    break;
+                default:
+                    alert("Symptôme non reconnu");
+            }
+        }
+    </script>
+  </body>
+  

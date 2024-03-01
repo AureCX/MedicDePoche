@@ -1,42 +1,60 @@
 <body>
   <div>
-      Veuillez sélectionner les symptômes que vous avez : <br>
+    Veuillez sélectionner les symptômes que vous avez : <br>
 
-      <button id="symptomButton1" onclick="selectSymptom(1)">1) Écorchures et éraflures : Des abrasions superficielles de la peau qui surviennent généralement lors d'une chute ou d'un frottement contre une surface rugueuse.
-    </button><br>
-      <br>
-      <button id="symptomButton2" onclick="selectSymptom(2)">2) Contusions : Des ecchymoses causées par un impact direct sur la peau, souvent résultantes d'un coup ou d'une chute.
-    </button><br>
-      <br>
-      <button id="symptomButton3" onclick="selectSymptom(3)">3) Entorses : Des étirements ou des déchirures des ligaments autour des articulations, généralement causés par une torsion ou une hyperextension.
-    </button><br>
-      <br>
-      <button id="symptomButton4" onclick="selectSymptom(4)">4) Fractures : Des cassures des os, qui peuvent survenir à la suite d'un traumatisme, d'une chute ou d'un impact important.
-    </button><br>
-      <br>
-      <button id="symptomButton5" onclick="selectSymptom(5)">5) Tendinites : Une inflammation des tendons, souvent causée par une surutilisation ou une tension excessive sur les muscles.
-    </button><br>
-      <br>
-      <button id="symptomButton6" onclick="selectSymptom(6)">6) Déchirures musculaires : Des déchirures dans les fibres musculaires, qui peuvent résulter d'un mouvement brusque, d'une surcharge ou d'une mauvaise technique d'exercice.
-    </button><br>
-      <br>
-      <button id="symptomButton7" onclick="selectSymptom(7)">7) Coupures et plaies : Des blessures ouvertes causées par des objets tranchants ou des instruments pointus.
-    </button><br>
-      <br>
-      <button id="symptomButton8" onclick="selectSymptom(8)">8) Brûlures : Des lésions cutanées causées par la chaleur, les produits chimiques ou d'autres agents irritants.
-    </button><br>
-      <br>
-      <button id="symptomButton9" onclick="selectSymptom(9)">9) Infections cutanées : Des infections bactériennes ou fongiques qui peuvent affecter la peau suite à une blessure ou à une plaie non traitée.
-    </button><br>
-      <br>
+    <button id="symptomButton1" onclick="selectSymptom(1)">1) Écorchures et éraflures : Des abrasions superficielles de la peau qui surviennent généralement lors d'une chute ou d'un frottement contre une surface rugueuse.</button><br>
+    <br>
+    <button id="symptomButton2" onclick="selectSymptom(2)">2) Contusions : Des ecchymoses causées par un impact direct sur la peau, souvent résultantes d'un coup ou d'une chute.</button><br>
+    <br>
+    <button id="symptomButton3" onclick="selectSymptom(3)">3) Entorses : Des étirements ou des déchirures des ligaments autour des articulations, généralement causés par une torsion ou une hyperextension.</button><br>
+    <br>
+    <button id="symptomButton4" onclick="selectSymptom(4)">4) Fractures : Des cassures des os, qui peuvent survenir à la suite d'un traumatisme, d'une chute ou d'un impact important.</button><br>
+    <br>
+    <button id="symptomButton5" onclick="selectSymptom(5)">5) Tendinites : Une inflammation des tendons, souvent causée par une surutilisation ou une tension excessive sur les muscles.</button><br>
+    <br>
+    <button id="symptomButton6" onclick="selectSymptom(6)">6) Déchirures musculaires : Des déchirures dans les fibres musculaires, qui peuvent résulter d'un mouvement brusque, d'une surcharge ou d'une mauvaise technique d'exercice.</button><br>
+    <br>
+    <button id="symptomButton7" onclick="selectSymptom(7)">7) Coupures et plaies : Des blessures ouvertes causées par des objets tranchants ou des instruments pointus.</button><br>
+    <br>
+    <button id="symptomButton8" onclick="selectSymptom(8)">8) Brûlures : Des lésions cutanées causées par la chaleur, les produits chimiques ou d'autres agents irritants.</button><br>
+    <br>
+    <button id="symptomButton9" onclick="selectSymptom(9)">9) Infections cutanées : Des infections bactériennes ou fongiques qui peuvent affecter la peau suite à une blessure ou à une plaie non traitée.</button><br>
+    <br>
   </div>
   <script>
-      function selectSymptom(symptomNumber) {
-          // Check if the input contains some keywords
-          if (symptomNumber) {
-              // Greet the user
-              alert("Vous avez sélectionné le symptôme " + symptomNumber);
-          }
+    function selectSymptom(symptomNumber) {
+      // Personalized alerts for each symptom
+      switch(symptomNumber) {
+        case 1:
+          alert("Vous avez sélectionné le symptôme 1 : Écorchures et éraflures");
+          break;
+        case 2:
+          alert("Vous avez sélectionné le symptôme 2 : Contusions");
+          break;
+        case 3:
+          alert("Vous avez sélectionné le symptôme 3 : Entorses");
+          break;
+        case 4:
+          alert("Vous avez sélectionné le symptôme 4 : Fractures");
+          break;
+        case 5:
+          alert("Vous avez sélectionné le symptôme 5 : Tendinites");
+          break;
+        case 6:
+          alert("Vous avez sélectionné le symptôme 6 : Déchirures musculaires");
+          break;
+        case 7:
+          alert("Vous avez sélectionné le symptôme 7 : Coupures et plaies");
+          break;
+        case 8:
+          alert("Vous avez sélectionné le symptôme 8 : Brûlures");
+          break;
+        case 9:
+          alert("Vous avez sélectionné le symptôme 9 : Infections cutanées");
+          break;
+        default:
+          alert("Symptôme non reconnu");
       }
+    }
   </script>
 </body>
