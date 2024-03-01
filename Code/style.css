@@ -51,3 +51,39 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
+/* Ajoutez ces styles dans votre fichier style.css */
+
+/* Positionne les boutons */
+.button-container {
+  text-align: center;
+}
+
+.button-container input {
+  margin: 10px;
+}
+
+/* Positionnement spécifique pour chaque bouton */
+#button-mains {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#button-torse {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#button-tete {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+#button-jambes {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
