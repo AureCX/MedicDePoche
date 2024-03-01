@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 125vh;
   margin: 0;
 }
 .welcome-message {
@@ -30,6 +30,7 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
+  padding: 0; /* Réinitialiser les marges et les rembourrages */
   font-family: Arial, sans-serif !important; /* Changer la police */
   color: hsl(236, 100%, 50%) !important; /* Changer la couleur du texte */
 }
