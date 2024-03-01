@@ -30,13 +30,6 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif; /* Changer la police */
-  color: hsl(231, 100%, 50%); /* Changer la couleur du texte */
-}
-.welcome-message {
-  text-align: center;
-}
-img {
-  display: block;
-  margin: 0 auto;
+  font-family: Arial, sans-serif !important; /* Changer la police */
+  color: hsl(236, 100%, 50%) !important; /* Changer la couleur du texte */
 }
