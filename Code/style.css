@@ -33,3 +33,21 @@ body {
   font-family: Arial, sans-serif !important; /* Changer la police */
   color: hsl(236, 100%, 50%) !important; /* Changer la couleur du texte */
 }
+.welcome-message {
+  position: relative;
+  text-align: center;
+}
+
+.cross-image-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cross-image-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
