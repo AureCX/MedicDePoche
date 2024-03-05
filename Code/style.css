@@ -39,14 +39,14 @@ body {
 }
 
 .cross-image-left {
-  position: absolute;
+  position: fixed;
   left: -10%;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .cross-image-right {
-  position: absolute;
+  position: fixed;
   right: -10%;
   top: 50%;
   transform: translateY(-50%);
@@ -64,36 +64,36 @@ body {
 
 /* Positionnement spécifique pour chaque bouton */
 #button-mains {
-  position: absolute;
+  position: fixed;
   top: 320px;
   left: 230px;
 }
 
 #button-mains2 {
-  position: absolute;
+  position: fixed;
   top: 320px;
   right: 500px;
 }
 
 #button-torse {
-  position: absolute;
+  position: fixed;
   top: 160px;
   right: 270px;
 }
 
 #button-tete {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   left: 0px;
 }
 
 #button-jambes {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
 }
 .button-container {
-  position: absolute;
+  position: fixed;
   top: 20px; /* Décalage depuis le haut */
   left: 20px; /* Décalage depuis la gauche */
 }
