@@ -173,3 +173,6 @@ body {
   top: 75px; /* Décalage depuis le haut */
   left: 10px; /* Décalage depuis la gauche */
 }
+body {
+  transition: background-color 1s ease; /* Transition de la couleur de fond sur 1 seconde */
+}

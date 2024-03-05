@@ -41,5 +41,22 @@ function addMessage(message) {
       sendMessage();
     }
   });
+// Fonction pour changer progressivement la couleur de fond
+function changeBackgroundColor() {
+    var colors = ['#ff0000', '#00ff00', '#0000ff']; // Liste de couleurs à utiliser
+    var index = 0; // Indice de la couleur actuelle
+    
+    // Fonction pour changer la couleur de fond
+    function nextColor() {
+      document.body.style.backgroundColor = colors[index];
+      index = (index + 1) % colors.length; // Passage à la couleur suivante
+    }
+    
+    // Changer la couleur de fond toutes les 2 secondes
+    setInterval(nextColor, 2000);
+  }
   
+  // Appel de la fonction pour changer progressivement la couleur de fond
+  changeBackgroundColor();
+    
   
