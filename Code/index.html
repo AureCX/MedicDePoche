@@ -35,40 +35,14 @@
   </div>
 
   <script>
-    function askQuestion() {
-      // Get the user input from the text box
-      var input = document.getElementById("input").value;
-      // Check if the input contains some keywords
-      if (input.includes("bonjour")) {
-        // Greet the user
-        alert("Bonjour, comment vas-tu ? Que veux-tu savoir ?");
-      } else if (input.includes("nom")) {
-        // Tell the user your name
-        alert("Mon nom est MedicDePoche3000. Je suis ici pour vous aider avec vos blessures.");
-      } else if (input.includes("heure")) {
-        // Tell the user the current time
-        var date = new Date();
-        var hours = date.getHours();
-        var minutes = date.getMinutes();
-        alert("Il est " + hours + ":" + minutes);
-      } else if (input.includes("Bonjour")) {
-        alert("Bonjour, comment vas-tu ? Que veux-tu savoir ?");
-      } else if (input.includes("mourir")) {
-        alert("T'es mal barré :/");
-      } else {
-        // Tell the user you don't understand
-        alert("Désolé, je n'ai pas compris votre question. Veuillez la reformuler.");
-      }
-    }
-
     function sendMessage() {
       var input = document.getElementById("input").value;
-      // Add user message to chatbox
+      // Ajoutez le message de l'utilisateur à la chatbox
       addMessage(input, true);
-      // Clear input field
+      // Effacez le champ de saisie
       document.getElementById("input").value = "";
-      // Respond to the question
-      answerQuestion(input);
+      // Envoyez la question à ChatGPT et recevez la réponse
+      askChatGPT(input);
     }
 
     function addMessage(message, isUser) {
@@ -84,24 +58,35 @@
       chatMessages.appendChild(messageDiv);
     }
 
-    function answerQuestion(question) {
-      var answer;
-      if (question.includes("bonjour")) {
-        answer = "Bonjour, comment vas-tu ? Que veux-tu savoir ?";
-      } else if (question.includes("nom")) {
-        answer = "Mon nom est MedicDePoche3000. Je suis ici pour vous aider avec vos blessures.";
-      } else if (question.includes("heure")) {
-        var date = new Date();
-        var hours = date.getHours();
-        var minutes = date.getMinutes();
-        answer = "Il est " + hours + ":" + minutes;
-      } else if (question.includes("mourir")) {
-        answer = "T'es mal barré :/";
-      } else {
-        answer = "Désolé, je n'ai pas compris votre question. Veuillez la reformuler.";
-      }
+    function askChatGPT(question) {
+  // Utilisez l'API de ChatGPT pour obtenir une réponse à la question
+  // Remplacez 'YOUR_API_KEY' par votre clé d'API
+  fetch('https://api.openai.com/v1/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer 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' // Remplacez par votre clé d'API
+    },
+    body: JSON.stringify({
+      prompt: question,
+      max_tokens: 50,
+      temperature: 0.7
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data && data.choices && data.choices.length > 0 && data.choices[0].text) {
+      var answer = data.choices[0].text.trim();
+      // Ajoutez la réponse de ChatGPT à la chatbox
       addMessage(answer, false);
+    } else {
+      console.error('Invalid response format:', data);
     }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+}
 
     function toggleChatbox() {
       var chatbox = document.getElementById("chatbox");

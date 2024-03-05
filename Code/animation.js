@@ -43,7 +43,7 @@ function addMessage(message) {
   });
 // Fonction pour changer progressivement la couleur de fond
 function changeBackgroundColor() {
-    var colors = ['#ff0000', '#00ff00', '#0000ff']; // Liste de couleurs à utiliser
+    var colors = ['#0404B4', '#FF0000', '#FFFFFF']; // Liste de couleurs à utiliser
     var index = 0; // Indice de la couleur actuelle
     
     // Fonction pour changer la couleur de fond
