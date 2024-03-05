@@ -103,3 +103,67 @@ body {
   height: 150px; /* Hauteur du bouton */
 }
 
+/* Chatbox réduite */
+.chatbox-minimized {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chatbox-minimized img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Chatbox complète */
+.chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  display: none;
+}
+
+.chatbox-visible {
+  display: block;
+}
+
+/* Style des messages */
+.chat-messages {
+  height: 200px;
+  overflow-y: auto;
+}
+
+/* Style de la zone de saisie */
+.chat-input {
+  margin-top: 10px;
+}
+
+.chat-input input[type="text"] {
+  width: 200px;
+  padding: 5px;
+}
+
+.chat-input button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}
