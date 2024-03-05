@@ -58,5 +58,3 @@ function changeBackgroundColor() {
   
   // Appel de la fonction pour changer progressivement la couleur de fond
   changeBackgroundColor();
-    
-  
