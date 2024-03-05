@@ -83,15 +83,16 @@ body {
 
 #button-tete {
   position: absolute;
-  bottom: 540px;
+  bottom: 520px;
   left: 656px;
 }
 
 #button-jambes {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  right: 650px;
 }
+
 .button-container {
   position: absolute;
   top: 20px; /* Décalage depuis le haut */
@@ -105,6 +106,6 @@ body {
 
 .button-rectangle {
   position: absolute;
-  top: 20px; /* Décalage depuis le haut */
-  left: 20px; /* Décalage depuis la gauche */
+  top: 75px; /* Décalage depuis le haut */
+  left: 10px; /* Décalage depuis la gauche */
 }
