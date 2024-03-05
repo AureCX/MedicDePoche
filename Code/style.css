@@ -66,25 +66,25 @@ body {
 #button-mains {
   position: absolute;
   top: 320px;
-  left: 230px;
+  left: 585px;
 }
 
 #button-mains2 {
   position: absolute;
   top: 320px;
-  right: 570px;
+  right: 585px;
 }
 
 #button-torse {
   position: absolute;
   top: 160px;
-  right: 270px;
+  right: 635px;
 }
 
 #button-tete {
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 540px;
+  left: 656px;
 }
 
 #button-jambes {
@@ -103,3 +103,8 @@ body {
   height: 150px; /* Hauteur du bouton */
 }
 
+.button-rectangle {
+  position: absolute;
+  top: 20px; /* Décalage depuis le haut */
+  left: 20px; /* Décalage depuis la gauche */
+}
