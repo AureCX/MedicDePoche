@@ -58,3 +58,8 @@ function changeBackgroundColor() {
   
   // Appel de la fonction pour changer progressivement la couleur de fond
   changeBackgroundColor();
+// Fonction pour ouvrir et fermer la chatbox
+function toggleChatbox() {
+  var chatbox = document.getElementById("chatbox");
+  chatbox.classList.toggle("chatbox-visible");
+}
