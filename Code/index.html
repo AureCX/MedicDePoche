@@ -33,10 +33,6 @@
       <button onclick="sendMessage()">Envoyer</button>
     </div>
   </div>
-<!-- Bouton pour fermer la chatbox -->
-<div class="close-button" onclick="toggleChatbox()">
-  <img src="x-rouge.png" alt="Fermer la chatbox" width="20" height="20">
-</div>
 
 <script>
   function askQuestion() {
@@ -133,7 +129,10 @@
       window.open(url, "popup", "width=600,height=600");
     }
   </script>
-  
+  <!-- Bouton pour fermer la chatbox -->
+<div class="close-button" onclick="toggleChatbox()">
+  <img src="x-rouge.png" alt="Fermer la chatbox" width="20" height="20">
+</div>
 
   <!-- Autres boutons -->
   <input type="button" value="Mains" onclick="openFile('blessures_mains.html')" id="button-mains">
