@@ -57,6 +57,18 @@ img {
   right: 600px;
 }
 
+#button-bras {
+  position: absolute;
+  bottom: 30px;
+  right: 650px;
+}
+
+#button-bras2 {
+  position: absolute;
+  bottom: 30px;
+  right: 650px;
+}
+
 #button-torse {
   position: absolute;
   top: 160px;
@@ -73,6 +85,12 @@ img {
   position: absolute;
   bottom: 30px;
   right: 650px;
+}
+
+#button-jambes2 {
+  position: absolute;
+  bottom: 30px;
+  left: 650px;
 }
 
 .button-container {
