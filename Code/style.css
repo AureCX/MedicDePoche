@@ -6,7 +6,7 @@ body {
   height: 90vh;
   margin: 0;
   font-family: Arial, sans-serif ; /* Changer la police */
-  color: hsl(236, 100%, 50%) ; /* Changer la couleur du texte */
+  color: hwb(0 0% 100%) ; /* Changer la couleur du texte */
   transition: background-color 1s ease; /* Transition de couleur de fond */
   background-color: #ffffff; /* Couleur de fond initiale */
 }

@@ -91,7 +91,7 @@
     messageDiv.textContent = message;
     chatMessages.appendChild(messageDiv);
   }
-
+  
   function answerQuestion(question) {
   var answer;
   if (question.includes("bonjour")) {
@@ -133,6 +133,14 @@
 <div class="close-button" onclick="toggleChatbox()">
   <img src="x-rouge.png" alt="Fermer la chatbox" width="20" height="20">
 </div>
+<script>
+  function handleKeyPress(event) {
+    if (event.key === "Enter") {
+      sendMessage(); // Appel de la fonction sendMessage lorsque la touche "Entrée" est pressée
+    }
+  }
+</script>
+<input type="text" id="input" placeholder="Pose ta question ici" onkeypress="handleKeyPress(event)">
 
   <!-- Autres boutons -->
   <input type="button" value="Mains" onclick="openFile('blessures_mains.html')" id="button-mains">
