@@ -1,15 +1,4 @@
 // JavaScript code
-
-// Fonction pour déplacer l'image lorsqu'elle est cliquée
-function moveImage() {
-    var image = document.querySelector('img');
-    image.style.transition = 'transform 0.5s ease';
-    image.style.transform = 'translateX(100px)'; // Déplacement de l'image de 100 pixels vers la droite
-  }
-  
-  // Ajouter un gestionnaire d'événements pour détecter les clics sur l'image
-  var image = document.querySelector('img');
-  image.addEventListener('click', moveImage);
   // Fonction pour ajouter un message à la chatbox
 function addMessage(message) {
     var chatMessages = document.getElementById('chat-messages');
