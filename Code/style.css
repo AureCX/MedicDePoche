@@ -47,20 +47,20 @@ img {
 /* Positionnement spécifique pour chaque bouton */
 #button-mains {
   position: absolute;
-  top: 320px;
-  left: 585px;
+  top: 298px;
+  left: 600px;
 }
 
 #button-mains2 {
   position: absolute;
-  top: 320px;
-  right: 585px;
+  top: 298px;
+  right: 600px;
 }
 
 #button-torse {
   position: absolute;
   top: 160px;
-  right: 647px;
+  right: 647,5px;
 }
 
 #button-tete {
