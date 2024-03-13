@@ -59,14 +59,14 @@ img {
 
 #button-arms {
   position: absolute;
-  bottom: 30px;
-  right: 650px;
+  bottom: 350px;
+  right: 600px;
 }
 
 #button-arms2 {
   position: absolute;
-  bottom: 30px;
-  right: 650px;
+  bottom: 350px;
+  left: 600px;
 }
 
 #button-torse {
@@ -83,14 +83,8 @@ img {
 
 #button-jambes {
   position: absolute;
-  bottom: 30px;
-  right: 650px;
-}
-
-#button-jambes2 {
-  position: absolute;
-  bottom: 30px;
-  left: 650px;
+  bottom: 150px;
+  right: 65àpx;
 }
 
 .button-container {
@@ -101,7 +95,7 @@ img {
 
 .square-button {
   width: 75px; /* Largeur du bouton */
-  height: 150px; /* Hauteur du bouton */
+  height: 160px; /* Hauteur du bouton */
 }
 
 .rectangle-button {
@@ -109,6 +103,10 @@ img {
   height: 50px; /* Hauteur du bouton */
 }
 
+.line-button {
+  width: 20px;
+  height: 150px;
+}
 /* Chatbox réduite */
 .chatbox-minimized {
   position: fixed;
