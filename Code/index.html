@@ -162,6 +162,23 @@
   <input type="button" value="Tête" onclick="openFile('blessures_tete.html')" class="rectangle-button" id="button-tete">
   <input type="button" value="Bras" onclick="openFile('blessures_bras.html')" id="button-arms">
   <input type="button" value="Bras" onclick="openFile('blessures_bras.html')" id="button-arms2">
+  <button onclick="convertTextToSpeech()">Convertir en discours</button>
+
   <script src="script.js"></script>
+  <script>
+    function convertTextToSpeech() {
+      // Texte à convertir en discours
+      var texte = "Bonjour, comment vas-tu ? Que veux-tu savoir ?";
+      
+      // Créer un objet SpeechSynthesisUtterance
+      var utterance = new SpeechSynthesisUtterance(texte);
+      
+      // Définir la langue en français
+      utterance.lang = 'fr-FR';
+      
+      // Utiliser l'API SpeechSynthesis pour parler
+      window.speechSynthesis.speak(utterance);
+    }
+  </script>
 </body>
 </html>
