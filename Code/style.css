@@ -183,3 +183,8 @@ img {
 .close-button img {
   filter: brightness(0) invert(1); /* Inversion des couleurs pour obtenir une croix rouge */
 }
+/* CSS pour rendre les boutons invisibles */
+.invisible-button {
+  opacity: 0; /* Masque visuellement le bouton */
+  pointer-events: auto; /* Permet aux événements de pointer d'être détectés */
+}
