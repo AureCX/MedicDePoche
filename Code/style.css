@@ -46,49 +46,49 @@ img {
 
 /* Positionnement spécifique pour chaque bouton */
 #button-mains {
-  position: absolute;
+  position: fixed;
   top: 298px;
   left: 600px;
 }
 
 #button-mains2 {
-  position: absolute;
+  position: fixed;
   top: 298px;
   right: 600px;
 }
 
 #button-arms {
-  position: absolute;
+  position: fixed;
   bottom: 350px;
   right: 600px;
 }
 
 #button-arms2 {
-  position: absolute;
+  position: fixed;
   bottom: 350px;
   left: 600px;
 }
 
 #button-torse {
-  position: absolute;
+  position: fixed;
   top: 150px;
   right: 647,5px;
 }
 
 #button-tete {
-  position: absolute;
+  position: fixed;
   bottom: 545px;
   left: 658px;
 }
 
 #button-jambes {
-  position: absolute;
+  position: fixed;
   bottom: 150px;
-  right: 65àpx;
+  right: 645px;
 }
 
 .button-container {
-  position: absolute;
+  position: fixed;
   top: 20px; /* Décalage depuis le haut */
   left: 20px; /* Décalage depuis la gauche */
 }
@@ -173,7 +173,7 @@ img {
 }
 /* Style du bouton de fermeture */
 .close-button {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 10px;
   cursor: pointer;
