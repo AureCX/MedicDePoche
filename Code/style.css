@@ -40,59 +40,59 @@ img {
   text-align: center;
 }
 
-.button-container input {
-  margin: 10px;
+/* Assuming a hypothetical container size of 1000px width and 600px height */
+.container {
+  width: 1000px;
+  height: 600px;
 }
 
-/* Positionnement spécifique pour chaque bouton */
 #button-mains {
   position: fixed;
-  top: 298px;
-  left: 600px;
+  top: 45.5%; /* 298px / 600px * 100 */
+  left: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-mains2 {
   position: fixed;
-  top: 298px;
-  right: 600px;
+  top: 45.5%; /* 298px / 600px * 100 */
+  right: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-arms {
   position: fixed;
-  bottom: 350px;
-  right: 600px;
+  bottom: 55%; /* 350px / 600px * 100 */
+  right: 56%; /* 600px / 1000px * 100 */
 }
 
 #button-arms2 {
   position: fixed;
-  bottom: 350px;
-  left: 600px;
+  bottom: 58.33%; /* 350px / 600px * 100 */
+  left: 60%; /* 600px / 1000px * 100 */
 }
 
 #button-torse {
   position: fixed;
-  top: 150px;
-  right: 647,5px;
+  top: 25%; /* 150px / 600px * 100 */
+  right: 64.75%; /* 647.5px / 1000px * 100 */
 }
 
 #button-tete {
   position: fixed;
-  bottom: 545px;
-  left: 658px;
+  bottom: 90.83%; /* 545px / 600px * 100 */
+  left: 65.8%; /* 658px / 1000px * 100 */
 }
 
 #button-jambes {
   position: fixed;
-  bottom: 150px;
-  right: 645px;
+  bottom: 25%; /* 150px / 600px * 100 */
+  right: 64.5%; /* 645px / 1000px * 100 */
 }
 
 .button-container {
   position: fixed;
-  top: 20px; /* Décalage depuis le haut */
-  left: 20px; /* Décalage depuis la gauche */
+  top: 3.33%; /* 20px / 600px * 100 */
+  left: 3.33%; /* 20px / 1000px * 100 */
 }
-
 .square-button {
   width: 75px; /* Largeur du bouton */
   height: 160px; /* Hauteur du bouton */
@@ -185,6 +185,6 @@ img {
 }
 /* CSS pour rendre les boutons invisibles */
 .invisible-button {
-  opacity: 0; /* Masque visuellement le bouton */
+  opacity: 100; /* Masque visuellement le bouton */
   pointer-events: auto; /* Permet aux événements de pointer d'être détectés */
 }
