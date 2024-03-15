@@ -185,6 +185,28 @@ img {
 }
 /* CSS pour rendre les boutons invisibles */
 .invisible-button {
-  opacity: 0; /* Masque visuellement le bouton */
+  opacity: 100; /* Masque visuellement le bouton */
   pointer-events: auto; /* Permet aux événements de pointer d'être détectés */
+}
+.entete {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.croix img {
+  margin-right: 10px;
+}
+
+.boutons button {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
 }
