@@ -19,20 +19,44 @@
       width: 120px; /* Largeur fixe */
       height: 40px; /* Hauteur fixe */
     }
+    /* Style du bandeau d'entête */
+    .bandeau-entete {
+      background-color: black;
+      color: white;
+      padding: 10px; /* Ajoute un peu d'espacement autour du texte */
+      width: 100%; /* Largeur de 100% pour occuper toute la largeur de la page */
+      box-sizing: border-box; /* Inclut le rembourrage dans la largeur totale */
+    }
+    /* Style des boutons */
+    .bouton-rectangulaire {
+      background-color: #6cdd9d; /* Couleur de fond */
+      color: white; /* Couleur du texte */
+      padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+      border: none; /* Supprime les bordures */
+      cursor: pointer; /* Curseur de la souris change en main lorsqu'il survole le bouton */
+      text-align: center; /* Centre le texte à l'intérieur du bouton */
+      display: inline-block; /* Permet de spécifier une largeur/hauteur à l'élément */
+      text-decoration: none; /* Supprime le soulignement du texte */
+      font-size: 16px; /* Taille du texte */
+      font-weight: bold; /* Poids de la police en gras */
+      outline: none; /* Supprime la bordure de focus */
+    }
+
+    /* Style pour les espacements entre les boutons */
+    .bouton-espace {
+      margin-right: 10px; /* Ajoute un espacement à droite entre les boutons */
+    }
   </style>
   
 </head>
 <body>
   <header class="entete">
-    <div class="croix">
-      <img src="croix_rouge.png" alt="Croix Rouge" width="50" height="50">
-      <img src="croix_rouge.png" alt="Croix Rouge" width="50" height="50">
-    </div>
-    <h1>Bienvenue sur le MedicDePoche3000</h1>
+    <h1>MedicDePoche3000</h1>
     <div class="boutons">
-      <button>Bouton 1</button>
-      <button>Bouton 2</button>
-      <button>Bouton 3</button>
+      <button class="bouton-rectangulaire">FAQ</button>
+      <button class="bouton-rectangulaire bouton-espace">Les numéros importants</button>
+      <button class="bouton-rectangulaire bouton-espace">Crédits</button>
+      <button class="bouton-rectangulaire bouton-espace">Nous supporter (gros rat)</button>
     </div>
   </header>
   <img src="Corps.png" alt="image_corps_page_d-accueil" width="300" height="500">
