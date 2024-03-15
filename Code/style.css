@@ -48,25 +48,25 @@ img {
 
 #button-mains {
   position: fixed;
-  top: 55.5%; /* 298px / 600px * 100 */
-  left: 54%; /* 600px / 1000px * 100 */
+  top: 54%; /* 298px / 600px * 100 */
+  left: 53%; /* 600px / 1000px * 100 */
 }
 
 #button-mains2 {
   position: fixed;
-  top: 55.5%; /* 298px / 600px * 100 */
-  right: 54%; /* 600px / 1000px * 100 */
+  top: 54%; /* 298px / 600px * 100 */
+  right: 53%; /* 600px / 1000px * 100 */
 }
 
 #button-arms {
   position: fixed;
-  bottom: 45%; /* 350px / 600px * 100 */
+  bottom: 47%; /* 350px / 600px * 100 */
   right: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-arms2 {
   position: fixed;
-  bottom: 45%; /* 350px / 600px * 100 */
+  bottom: 47%; /* 350px / 600px * 100 */
   left: 54%; /* 600px / 1000px * 100 */
 }
 
