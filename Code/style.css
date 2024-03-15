@@ -41,8 +41,8 @@ img {
 
 /* Assuming a hypothetical container size of 1000px width and 600px height */
 .container {
-  width: 1000px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
 }
 
 #button-mains {
