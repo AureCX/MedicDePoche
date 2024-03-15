@@ -61,31 +61,31 @@ img {
 #button-arms {
   position: fixed;
   bottom: 55%; /* 350px / 600px * 100 */
-  right: 56%; /* 600px / 1000px * 100 */
+  right: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-arms2 {
   position: fixed;
-  bottom: 58.33%; /* 350px / 600px * 100 */
-  left: 60%; /* 600px / 1000px * 100 */
+  bottom: 55%; /* 350px / 600px * 100 */
+  left: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-torse {
   position: fixed;
-  top: 25%; /* 150px / 600px * 100 */
-  right: 64.75%; /* 647.5px / 1000px * 100 */
+  top: 23%; /* 150px / 600px * 100 */
+  right: 47.25%; /* 647.5px / 1000px * 100 */
 }
 
 #button-tete {
   position: fixed;
-  bottom: 90.83%; /* 545px / 600px * 100 */
-  left: 65.8%; /* 658px / 1000px * 100 */
+  bottom: 85%; /* 545px / 600px * 100 */
+  left: 48%; /* 658px / 1000px * 100 */
 }
 
 #button-jambes {
   position: fixed;
   bottom: 25%; /* 150px / 600px * 100 */
-  right: 64.5%; /* 645px / 1000px * 100 */
+  right: 47.25%; /* 645px / 1000px * 100 */
 }
 
 .button-container {
@@ -185,6 +185,6 @@ img {
 }
 /* CSS pour rendre les boutons invisibles */
 .invisible-button {
-  opacity: 100; /* Masque visuellement le bouton */
+  opacity: 0; /* Masque visuellement le bouton */
   pointer-events: auto; /* Permet aux événements de pointer d'être détectés */
 }
