@@ -189,7 +189,7 @@ img {
   pointer-events: auto; /* Permet aux événements de pointer d'être détectés */
 }
 .entete {
-  background-color: black;
+  background-color: #6cdd9d;
   color: white;
   padding: 20px;
   display: flex;
