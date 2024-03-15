@@ -52,3 +52,17 @@ function toggleChatbox() {
   var chatbox = document.getElementById("chatbox");
   chatbox.classList.toggle("chatbox-visible");
 }
+// Fonction pour ouvrir et fermer la chatbox
+function toggleChatbox() {
+  var chatbox = document.getElementById("chatbox");
+  var closeButton = document.querySelector(".close-button"); // Sélectionner le bouton de fermeture
+  
+  chatbox.classList.toggle("chatbox-visible");
+  
+  // Vérifier si la chatbox est visible
+  if (chatbox.classList.contains("chatbox-visible")) {
+    closeButton.style.display = "block"; // Afficher le bouton de fermeture
+  } else {
+    closeButton.style.display = "none"; // Masquer le bouton de fermeture
+  }
+}

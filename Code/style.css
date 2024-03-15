@@ -47,49 +47,49 @@ img {
 }
 
 #button-mains {
-  position: fixed;
-  top: 54%; /* 298px / 600px * 100 */
-  left: 53%; /* 600px / 1000px * 100 */
+  position: absolute;
+  top: 55.5%; /* 298px / 600px * 100 */
+  left: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-mains2 {
-  position: fixed;
-  top: 54%; /* 298px / 600px * 100 */
-  right: 53%; /* 600px / 1000px * 100 */
+  position: absolute;
+  top: 55.5%; /* 298px / 600px * 100 */
+  right: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-arms {
-  position: fixed;
-  bottom: 47%; /* 350px / 600px * 100 */
+  position: absolute;
+  bottom: 45%; /* 350px / 600px * 100 */
   right: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-arms2 {
-  position: fixed;
-  bottom: 47%; /* 350px / 600px * 100 */
+  position: absolute;
+  bottom: 45%; /* 350px / 600px * 100 */
   left: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-torse {
-  position: fixed;
-  top: 30%; /* 150px / 600px * 100 */
+  position:absolute;
+  top: 33%; /* 150px / 600px * 100 */
   right: 47.25%; /* 647.5px / 1000px * 100 */
 }
 
 #button-tete {
-  position: fixed;
-  bottom: 77%; /* 545px / 600px * 100 */
+  position: absolute;
+  bottom: 75%; /* 545px / 600px * 100 */
   left: 48%; /* 658px / 1000px * 100 */
 }
 
 #button-jambes {
-  position: fixed;
+  position: absolute;
   bottom: 15%; /* 150px / 600px * 100 */
   right: 47.25%; /* 645px / 1000px * 100 */
 }
 
 .button-container {
-  position: fixed;
+  position: absolute;
   top: 3.33%; /* 20px / 600px * 100 */
   left: 3.33%; /* 20px / 1000px * 100 */
 }

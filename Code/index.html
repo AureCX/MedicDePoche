@@ -6,7 +6,7 @@
   <link rel="icon" type="image/jpeg" href="https://www.larousse.fr/encyclopedie/data/images/1009656-Drapeau_de_la_Croix-Rouge.jpg">
   <style>
     body {
-      background-color: hwb(0 100% 0%); /* Couleur de fond initiale */
+      background-color: #fde9e0; /* Couleur de fond initiale */
       transition: background-color 1s ease; /* Transition de couleur */
     }
     .button-container {
@@ -23,7 +23,7 @@
     /* Style du bandeau d'entête */
     .bandeau-entete {
       background-color: black;
-      color: white;
+      color: #6cdd9d;
       padding: 10px; /* Ajoute un peu d'espacement autour du texte */
       width: 100%; /* Largeur de 100% pour occuper toute la largeur de la page */
       box-sizing: border-box; /* Inclut le rembourrage dans la largeur totale */
@@ -46,6 +46,14 @@
     /* Style pour les espacements entre les boutons */
     .bouton-espace {
       margin-right: 10px; /* Ajoute un espacement à droite entre les boutons */
+    }
+    .close-button {
+      display: none; /* Par défaut, le bouton est caché */
+    }
+
+    /* Afficher le bouton uniquement lorsque la chatbox est visible */
+    .chatbox-visible .close-button {
+      display: block;
     }
   </style>
   
