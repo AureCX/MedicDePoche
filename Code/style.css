@@ -48,43 +48,43 @@ img {
 
 #button-mains {
   position: fixed;
-  top: 45.5%; /* 298px / 600px * 100 */
+  top: 55.5%; /* 298px / 600px * 100 */
   left: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-mains2 {
   position: fixed;
-  top: 45.5%; /* 298px / 600px * 100 */
+  top: 55.5%; /* 298px / 600px * 100 */
   right: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-arms {
   position: fixed;
-  bottom: 55%; /* 350px / 600px * 100 */
+  bottom: 45%; /* 350px / 600px * 100 */
   right: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-arms2 {
   position: fixed;
-  bottom: 55%; /* 350px / 600px * 100 */
+  bottom: 45%; /* 350px / 600px * 100 */
   left: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-torse {
   position: fixed;
-  top: 23%; /* 150px / 600px * 100 */
+  top: 33%; /* 150px / 600px * 100 */
   right: 47.25%; /* 647.5px / 1000px * 100 */
 }
 
 #button-tete {
   position: fixed;
-  bottom: 85%; /* 545px / 600px * 100 */
+  bottom: 75%; /* 545px / 600px * 100 */
   left: 48%; /* 658px / 1000px * 100 */
 }
 
 #button-jambes {
   position: fixed;
-  bottom: 25%; /* 150px / 600px * 100 */
+  bottom: 15%; /* 150px / 600px * 100 */
   right: 47.25%; /* 645px / 1000px * 100 */
 }
 
