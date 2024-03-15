@@ -7,7 +7,6 @@ body {
   margin: 0;
   font-family: Arial, sans-serif ; /* Changer la police */
   color: hwb(0 0% 100%) ; /* Changer la couleur du texte */
-  transition: background-color 1s ease; /* Transition de couleur de fond */
   background-color: #ffffff; /* Couleur de fond initiale */
 }
 
@@ -48,38 +47,38 @@ img {
 
 #button-mains {
   position: absolute;
-  top: 55.5%; /* 298px / 600px * 100 */
-  left: 54%; /* 600px / 1000px * 100 */
+  top: 54.5%; /* 298px / 600px * 100 */
+  left: 53%; /* 600px / 1000px * 100 */
 }
 
 #button-mains2 {
   position: absolute;
-  top: 55.5%; /* 298px / 600px * 100 */
-  right: 54%; /* 600px / 1000px * 100 */
+  top: 54.5%; /* 298px / 600px * 100 */
+  right: 53%; /* 600px / 1000px * 100 */
 }
 
 #button-arms {
   position: absolute;
-  bottom: 45%; /* 350px / 600px * 100 */
+  bottom: 46%; /* 350px / 600px * 100 */
   right: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-arms2 {
   position: absolute;
-  bottom: 45%; /* 350px / 600px * 100 */
+  bottom: 46%; /* 350px / 600px * 100 */
   left: 54%; /* 600px / 1000px * 100 */
 }
 
 #button-torse {
   position:absolute;
-  top: 33%; /* 150px / 600px * 100 */
+  top: 31%; /* 150px / 600px * 100 */
   right: 47.25%; /* 647.5px / 1000px * 100 */
 }
 
 #button-tete {
   position: absolute;
-  bottom: 75%; /* 545px / 600px * 100 */
-  left: 48%; /* 658px / 1000px * 100 */
+  bottom: 76%; /* 545px / 600px * 100 */
+  left: 48.25%; /* 658px / 1000px * 100 */
 }
 
 #button-jambes {
