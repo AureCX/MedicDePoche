@@ -46,6 +46,14 @@
     .bouton-espace {
       margin-right: 10px; /* Ajoute un espacement à droite entre les boutons */
     }
+    .close-button {
+      display: none; /* Par défaut, le bouton est caché */
+    }
+
+    /* Afficher le bouton uniquement lorsque la chatbox est visible */
+    .chatbox-visible .close-button {
+      display: block;
+    }
   </style>
   
 </head>
