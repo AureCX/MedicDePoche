@@ -201,11 +201,22 @@ img {
 }
 
 .boutons button {
-  background-color: white;
+  background-color: #6cdd9d;
   color: black;
   padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  border-top: none; /* Supprimer la bordure supérieure */
+  border-bottom: none; /* Supprimer la bordure inférieure */
+  border-left: 1px solid black; /* Bordure gauche */
+  border-right: 1px solid black; /* Bordure droite */
+  border-radius: 0; /* Supprimer le bord arrondi */
   margin-left: 10px;
   cursor: pointer;
 }
+.bandeau-entete {
+  position: fixed; /* Fixe le bandeau en haut de la fenêtre */
+  top: 0; /* Place le bandeau au sommet de la fenêtre */
+  left: 0; /* Aligne le bandeau à gauche de la fenêtre */
+  width: 100%; /* Largeur de 100% pour occuper toute la largeur de la fenêtre */
+  z-index: 9999; /* Assure que le bandeau est au-dessus de tout le contenu */
+}
+

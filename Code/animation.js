@@ -30,28 +30,6 @@ function addMessage(message) {
       sendMessage();
     }
   });
-// Fonction pour changer progressivement la couleur de fond
-function changeBackgroundColor() {
-    var colors = ['#0404B4', '#FF0000', '#FFFFFF']; // Liste de couleurs à utiliser
-    var index = 0; // Indice de la couleur actuelle
-    
-    // Fonction pour changer la couleur de fond
-    function nextColor() {
-      document.body.style.backgroundColor = colors[index];
-      index = (index + 1) % colors.length; // Passage à la couleur suivante
-    }
-    
-    // Changer la couleur de fond toutes les 2 secondes
-    setInterval(nextColor, 2000);
-  }
-  
-  // Appel de la fonction pour changer progressivement la couleur de fond
-  changeBackgroundColor();
-// Fonction pour ouvrir et fermer la chatbox
-function toggleChatbox() {
-  var chatbox = document.getElementById("chatbox");
-  chatbox.classList.toggle("chatbox-visible");
-}
 // Fonction pour ouvrir et fermer la chatbox
 function toggleChatbox() {
   var chatbox = document.getElementById("chatbox");

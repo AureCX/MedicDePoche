@@ -24,9 +24,14 @@
     .bandeau-entete {
       background-color: black;
       color: #6cdd9d;
-      padding: 10px; /* Ajoute un peu d'espacement autour du texte */
+      padding: 10%; /* Ajoute un peu d'espacement autour du texte */
       width: 100%; /* Largeur de 100% pour occuper toute la largeur de la page */
       box-sizing: border-box; /* Inclut le rembourrage dans la largeur totale */
+      position: fixed; /* Fixe le bandeau en haut de la fenêtre */
+      top: 0; /* Place le bandeau au sommet de la fenêtre */
+      left: 0; /* Aligne le bandeau à gauche de la fenêtre */
+      width: 100%; /* Largeur de 100% pour occuper toute la largeur de la fenêtre */
+      z-index: 9999; /* Assure que le bandeau est au-dessus de tout le contenu */
     }
     /* Style des boutons */
     .bouton-rectangulaire {
@@ -47,14 +52,7 @@
     .bouton-espace {
       margin-right: 10px; /* Ajoute un espacement à droite entre les boutons */
     }
-    .close-button {
-      display: none; /* Par défaut, le bouton est caché */
-    }
-
-    /* Afficher le bouton uniquement lorsque la chatbox est visible */
-    .chatbox-visible .close-button {
-      display: block;
-    }
+    
   </style>
   
 </head>
@@ -62,10 +60,10 @@
   <header class="entete">
     <h1><span style="font-size: 30px;"><strong>MedicDePoche3000</strong></span></h1>
     <div class="boutons">
-      <button class="bouton-rectangulaire" title="Questions récurrentes">FAQ</button>
-      <button class="bouton-rectangulaire bouton-espace" title="Les numéros à appeler en cas d'urgence">Les numéros importants</button>
-      <button class="bouton-rectangulaire bouton-espace" title="Les auteurs de ce site et les aides">Crédits</button>
-      <button class="bouton-rectangulaire bouton-espace" title="Pas besoin de l'expliquer">Nous supporter (gros rat)</button>
+      <button class="bouton-rectangulaire" title="Questions récurrentes" onclick="openFile('.html')">FAQ</button>
+      <button class="bouton-rectangulaire bouton-espace" title="Les numéros à appeler en cas d'urgence" onclick="openFile('.html')">Les numéros importants</button>
+      <button class="bouton-rectangulaire bouton-espace" title="Les auteurs de ce site et les aides" onclick="openFile('.html')">Crédits</button>
+      <button class="bouton-rectangulaire bouton-espace" title="Pas besoin de l'expliquer" onclick="openFile('.html')">Nous supporter (gros rat)</button>
     </div>
   </header>
   <img src="Corps.png" alt="image_corps_page_d-accueil" width="300" height="500">
@@ -181,6 +179,16 @@
       window.open(url, "popup", "width=600,height=600");
     }
   </script>
+  <style>
+    .close-button {
+      display: none; /* Par défaut, le bouton est caché */
+    }
+
+    /* Afficher le bouton uniquement lorsque la chatbox est visible */
+    .chatbox-visible .close-button {
+      display: block;
+    }
+  </style>
   <!-- Bouton pour fermer la chatbox -->
 <div class="close-button" onclick="toggleChatbox()">
   <img src="x-rouge.png" alt="Fermer la chatbox" width="20" height="20">
@@ -206,7 +214,7 @@
   <script>
     function convertTextToSpeech() {
       // Texte à convertir en discours
-      var texte = "Bonjour, comment vas-tu ? Que veux-tu savoir ?";
+      var texte = "Bonjour, bienvenue sur MedicDePoche3000, comment vas-tu ? Que veux-tu savoir ?";
       
       // Créer un objet SpeechSynthesisUtterance
       var utterance = new SpeechSynthesisUtterance(texte);
