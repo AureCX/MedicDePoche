@@ -59,20 +59,20 @@ img {
 
 #button-arms {
   position: absolute;
-  bottom: 46%; /* 350px / 600px * 100 */
-  right: 54%; /* 600px / 1000px * 100 */
+  bottom: 58%; /* 350px / 600px * 100 */
+  right: 52.68%; /* 600px / 1000px * 100 */
 }
 
 #button-arms2 {
   position: absolute;
-  bottom: 46%; /* 350px / 600px * 100 */
-  left: 54%; /* 600px / 1000px * 100 */
+  bottom: 58%; /* 350px / 600px * 100 */
+  left: 52.68%; /* 600px / 1000px * 100 */
 }
 
 #button-torse {
   position:absolute;
-  top: 31%; /* 150px / 600px * 100 */
-  right: 47.25%; /* 647.5px / 1000px * 100 */
+  top: 24.5%; /* 150px / 600px * 100 */
+  right: 47.4%; /* 647.5px / 1000px * 100 */
 }
 
 #button-tete {
@@ -93,8 +93,8 @@ img {
   left: 3.33%; /* 20px / 1000px * 100 */
 }
 .square-button {
-  width: 60px; /* Largeur du bouton jambe/ torse*/
-  height: 200px; /* Hauteur du bouton */
+  width: 100px; /* Largeur du bouton jambe/ torse*/
+  height: 160px; /* Hauteur du bouton */
 }
 
 .rectangle-button {
@@ -103,8 +103,8 @@ img {
 }
 
 .line-button {
-  width: 20px; /* Largeur du bouton bras */
-  height: 150px;
+  width: 38px; /* Largeur du bouton bras */
+  height: 152px;
 }
 /* Chatbox réduite */
 .chatbox-minimized {
