@@ -78,7 +78,7 @@ img {
 #button-tete {
   position: absolute;
   bottom: 76%; /* 545px / 600px * 100 */
-  left: 48.25%; /* 658px / 1000px * 100 */
+  left: 48.3%; /* 658px / 1000px * 100 */
 }
 
 #button-jambes {
@@ -93,17 +93,17 @@ img {
   left: 3.33%; /* 20px / 1000px * 100 */
 }
 .square-button {
-  width: 75px; /* Largeur du bouton */
+  width: 75px; /* Largeur du bouton jambe/ torse*/
   height: 160px; /* Hauteur du bouton */
 }
 
 .rectangle-button {
-  width: 50px; /* Largeur du bouton */
-  height: 50px; /* Hauteur du bouton */
+  width: 65px; /* Largeur du bouton tête */
+  height: 71px; /* Hauteur du bouton */
 }
 
 .line-button {
-  width: 20px;
+  width: 20px; /* Largeur du bouton bras */
   height: 150px;
 }
 /* Chatbox réduite */
