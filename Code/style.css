@@ -93,8 +93,8 @@ img {
   left: 3.33%; /* 20px / 1000px * 100 */
 }
 .square-button {
-  width: 75px; /* Largeur du bouton jambe/ torse*/
-  height: 160px; /* Hauteur du bouton */
+  width: 60px; /* Largeur du bouton jambe/ torse*/
+  height: 200px; /* Hauteur du bouton */
 }
 
 .rectangle-button {
