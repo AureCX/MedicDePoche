@@ -85,39 +85,39 @@
   </div>
 
 <script>
-  function askQuestion() {
-    // Get the user input from the text box
-    var input = document.getElementById("input").value;
-    // Check if the input contains some keywords
-    if (input.includes("bonjour")) {
-      // Greet the user
-      alert("Bonjour, comment vas-tu ? Que veux-tu savoir ?");
-    } else if (input.includes("nom")) {
-      // Tell the user your name
-      alert("Mon nom est MedicDePoche3000. Je suis ici pour vous aider avec vos blessures.");
-    } else if (input.includes("heure")) {
-      // Tell the user the current time
-      var date = new Date();
-      var hours = date.getHours();
-      var minutes = date.getMinutes();
-      alert("Il est " + hours + ":" + minutes);
-    } else if (input.includes("Bonjour")) {
-      alert("Bonjour, comment vas-tu ? Que veux-tu savoir ?");
-    } else if (input.includes("mourir")) {
-      alert("T'es mal barré :/");
-    } else if (question.includes("pansement")) {
-    answer = "Pour une petite coupure, nettoyez d'abord la plaie avec de l'eau et du savon, puis appliquez un pansement propre.";
-  } else if (question.includes("fracture")) {
-    answer = "En cas de suspicion de fracture, il est important d'immobiliser la zone blessée et de consulter un professionnel de santé dès que possible.";
-  } else if (question.includes("brûlure")) {
-    answer = "En cas de brûlure, refroidissez la zone affectée sous de l'eau froide pendant au moins 10 minutes, puis couvrez la brûlure avec un chiffon propre.";
-  } else if (question.includes("entorse")) {
-    answer = "Pour une entorse légère, il est recommandé de suivre le protocole RICE : repos, glace, compression et élévation.";
-    } else {
-      // Tell the user you don't understand
-      alert("Désolé, je n'ai pas compris votre question. Veuillez la reformuler.");
-    }
-  }
+  // function askQuestion() {
+  //   // Get the user input from the text box
+  //   var input = document.getElementById("input").value;
+  //   // Check if the input contains some keywords
+  //   if (input.includes("bonjour")) {
+  //     // Greet the user
+  //     alert("Bonjour, comment vas-tu ? Que veux-tu savoir ?");
+  //   } else if (input.includes("nom")) {
+  //     // Tell the user your name
+  //     alert("Mon nom est MedicDePoche3000. Je suis ici pour vous aider avec vos blessures.");
+  //   } else if (input.includes("heure")) {
+  //     // Tell the user the current time
+  //     var date = new Date();
+  //     var hours = date.getHours();
+  //     var minutes = date.getMinutes();
+  //     alert("Il est " + hours + ":" + minutes);
+  //   } else if (input.includes("Bonjour")) {
+  //     alert("Bonjour, comment vas-tu ? Que veux-tu savoir ?");
+  //   } else if (input.includes("mourir")) {
+  //     alert("T'es mal barré :/");
+  //   } else if (question.includes("pansement")) {
+  //   answer = "Pour une petite coupure, nettoyez d'abord la plaie avec de l'eau et du savon, puis appliquez un pansement propre.";
+  // } else if (question.includes("fracture")) {
+  //   answer = "En cas de suspicion de fracture, il est important d'immobiliser la zone blessée et de consulter un professionnel de santé dès que possible.";
+  // } else if (question.includes("brûlure")) {
+  //   answer = "En cas de brûlure, refroidissez la zone affectée sous de l'eau froide pendant au moins 10 minutes, puis couvrez la brûlure avec un chiffon propre.";
+  // } else if (question.includes("entorse")) {
+  //   answer = "Pour une entorse légère, il est recommandé de suivre le protocole RICE : repos, glace, compression et élévation.";
+  //   } else {
+  //     // Tell the user you don't understand
+  //     alert("Désolé, je n'ai pas compris votre question. Veuillez la reformuler.");
+  //   }
+  // }
 
   function sendMessage() {
     var input = document.getElementById("input").value;
@@ -142,33 +142,33 @@
     chatMessages.appendChild(messageDiv);
   }
   
-  function answerQuestion(question) {
-  var answer;
-  if (question.includes("bonjour")) {
-    answer = "Bonjour, comment vas-tu ? Que veux-tu savoir ?";
-  } else if (question.includes("nom")) {
-    answer = "Mon nom est MedicDePoche3000. Je suis ici pour vous aider avec vos blessures.";
-  } else if (question.includes("heure")) {
-    var date = new Date();
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    answer = "Il est " + hours + ":" + minutes;
-  } else if (question.includes("mourir")) {
-    answer = "T'es mal barré :/";
-  } else if (question.includes("pansement")) {
-    answer = "Pour une petite coupure, nettoyez d'abord la plaie avec de l'eau et du savon, puis appliquez un pansement propre.";
-  } else if (question.includes("fracture")) {
-    answer = "En cas de suspicion de fracture, il est important d'immobiliser la zone blessée et de consulter un professionnel de santé dès que possible.";
-  } else if (question.includes("brûlure")) {
-    answer = "En cas de brûlure, refroidissez la zone affectée sous de l'eau froide pendant au moins 10 minutes, puis couvrez la brûlure avec un chiffon propre.";
-  } else if (question.includes("entorse")) {
-    answer = "Pour une entorse légère, il est recommandé de suivre le protocole RICE : repos, glace, compression et élévation.";
-  } else {
-    answer = "Désolé, je n'ai pas compris votre question. Veuillez la reformuler.";
-  }
-  addMessage(answer, false);
-}
-
+//   function answerQuestion(question) {
+//   var answer;
+//   if (question.includes("bonjour")) {
+//     answer = "Bonjour, comment vas-tu ? Que veux-tu savoir ?";
+//   } else if (question.includes("nom")) {
+//     answer = "Mon nom est MedicDePoche3000. Je suis ici pour vous aider avec vos blessures.";
+//   } else if (question.includes("heure")) {
+//     var date = new Date();
+//     var hours = date.getHours();
+//     var minutes = date.getMinutes();
+//     answer = "Il est " + hours + ":" + minutes;
+//   } else if (question.includes("mourir")) {
+//     answer = "T'es mal barré :/";
+//   } else if (question.includes("pansement")) {
+//     answer = "Pour une petite coupure, nettoyez d'abord la plaie avec de l'eau et du savon, puis appliquez un pansement propre.";
+//   } else if (question.includes("fracture")) {
+//     answer = "En cas de suspicion de fracture, il est important d'immobiliser la zone blessée et de consulter un professionnel de santé dès que possible.";
+//   } else if (question.includes("brûlure")) {
+//     answer = "En cas de brûlure, refroidissez la zone affectée sous de l'eau froide pendant au moins 10 minutes, puis couvrez la brûlure avec un chiffon propre.";
+//   } else if (question.includes("entorse")) {
+//     answer = "Pour une entorse légère, il est recommandé de suivre le protocole RICE : repos, glace, compression et élévation.";
+//   } else {
+//     answer = "Désolé, je n'ai pas compris votre question. Veuillez la reformuler.";
+//   }
+//   addMessage(answer, false);
+// }
+// Fonction pour envoyer la question à ChatGPT et afficher la réponse
 
     function toggleChatbox() {
       var chatbox = document.getElementById("chatbox");
@@ -210,7 +210,6 @@
   <input type="button" value="Bras" onclick="openFile('blessures_bras.html')" class="line-button invisible-button" id="button-arms2">
   <button onclick="convertTextToSpeech()">Convertir en discours</button>
 
-  <script src="script.js"></script>
   <script>
     function convertTextToSpeech() {
       // Texte à convertir en discours
@@ -225,6 +224,38 @@
       // Utiliser l'API SpeechSynthesis pour parler
       window.speechSynthesis.speak(utterance);
     }
+    function askChatGPT(question) {
+  // Envoyer la question à l'API de GPT-3.5 (vous devez remplacer 'YOUR_API_KEY' par votre clé API réelle)
+  fetch('https://api.openai.com/v1/completions', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer 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'
+      },
+      body: JSON.stringify({
+          model: 'text-davinci-003', // Modèle GPT-3.5 à utiliser
+          prompt: question, // Question de l'utilisateur
+          max_tokens: 100 // Nombre maximal de tokens dans la réponse
+      })
+  })
+  .then(response => response.json())
+  .then(data => {
+      // Vérifier si data.choices est défini et non vide
+      if (data.choices && data.choices.length > 0) {
+          // Récupérer la réponse de ChatGPT
+          const answer = data.choices[0].text.trim();
+          // Afficher la réponse dans la chatbox
+          addMessage(answer, false);
+      } else {
+          // Si aucune réponse n'est renvoyée, afficher un message d'erreur
+          addMessage("Désolé, aucune réponse n'a été trouvée.", false);
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
+}
   </script>
+  <script src="animation.js"></script>
 </body>
 </html>
