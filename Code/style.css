@@ -46,49 +46,49 @@ img {
 }
 
 #button-mains {
-  position: absolute;
-  top: 54.5%; /* 298px / 600px * 100 */
-  left: 53%; /* 600px / 1000px * 100 */
+  position: relative;
+  top: -50%; /* 298px / 600px * 100 */
+  left: 0%; /* 600px / 1000px * 100 */
 }
 
 #button-mains2 {
-  position: absolute;
-  top: 54.5%; /* 298px / 600px * 100 */
-  right: 53%; /* 600px / 1000px * 100 */
+  position: relative;
+  top: -50%; /* 298px / 600px * 100 */
+  right: 0%; /* 600px / 1000px * 100 */
 }
 
 #button-arms {
-  position: absolute;
-  bottom: 58.1%; /* 350px / 600px * 100 */
-  right: 52.6%; /* 600px / 1000px * 100 */
+  position: relative;
+  top: -50%; /* 350px / 600px * 100 */
+  right: 0%; /* 600px / 1000px * 100 */
 }
 
 #button-arms2 {
-  position: absolute;
-  bottom: 58.2%; /* 350px / 600px * 100 */
-  left: 52.6%; /* 600px / 1000px * 100 */
+  position: relative;
+  top: -50%; /* 350px / 600px * 100 */
+  left: 0%; /* 600px / 1000px * 100 */
 }
 
 #button-torse {
-  position:absolute;
-  top: 24.5%; /* 150px / 600px * 100 */
-  right: 47.4%; /* 647.5px / 1000px * 100 */
+  position:relative;
+  top: -50%; /* 150px / 600px * 100 */
+  right: 0%; /* 647.5px / 1000px * 100 */
 }
 
 #button-tete {
-  position: absolute;
-  bottom: 75.5%; /* 545px / 600px * 100 */
-  left: 48.3%; /* 658px / 1000px * 100 */
+  position: relative;
+  top: -50%; /* 545px / 600px * 100 */
+  left: 0%; /* 658px / 1000px * 100 */
 }
 
 #button-jambes {
-  position: absolute;
-  bottom: 15%; /* 150px / 600px * 100 */
-  right: 47.25%; /* 645px / 1000px * 100 */
+  position: relative;
+  top: -50%; /* 150px / 600px * 100 */
+  right: 0%; /* 645px / 1000px * 100 */
 }
 
 .button-container {
-  position: absolute;
+  position: relative;
   top: 3.33%; /* 20px / 600px * 100 */
   left: 3.33%; /* 20px / 1000px * 100 */
 }
@@ -219,10 +219,19 @@ img {
   cursor: pointer;
 }
 .bandeau-entete {
-  position: fixed; /* Fixe le bandeau en haut de la fenêtre */
-  top: 0; /* Place le bandeau au sommet de la fenêtre */
-  left: 0; /* Aligne le bandeau à gauche de la fenêtre */
+  position: relative; /* Fixe le bandeau en haut de la fenêtre */
+  top: 0%; /* Place le bandeau au sommet de la fenêtre */
+  left: 0%; /* Aligne le bandeau à gauche de la fenêtre */
   width: 100%; /* Largeur de 100% pour occuper toute la largeur de la fenêtre */
   z-index: 9999; /* Assure que le bandeau est au-dessus de tout le contenu */
 }
-
+.bouton-tts {
+  position :relative;
+  top: -50%;
+  left: 0%
+}
+.image-corps {
+  position: relative;
+  top:10%;
+  left : 0%
+}
