@@ -1,0 +1,17 @@
+  width: 5vw; /* Largeur du bouton jambe/ torse*/
+  height: 11vw; /* Hauteur du bouton */
+}
+
+.rectangle-button {
+  width: 5vw; /* Largeur du bouton tête */
+  height: 6vw; /* Hauteur du bouton */
+}
+
+.line-button {
+  width: 4vw; /* Largeur du bouton bras */
+  height: 8vw; /* Hauteur du bouton bras */
+}
+
+.main-button {
+  width: 2vw; /* Largeur du bouton main*/
+  height: 2vw; /* Hauteur du bouton */

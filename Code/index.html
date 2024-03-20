@@ -2,12 +2,35 @@
 <html>
 <head>
   <title>MedicDePoche3000</title>
+  <html lang="fr"></html>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="description" content="Bienvenue sur MedicDePoche3000, votre assistant de blessures chez vous, et partout !">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/jpeg" href="https://www.larousse.fr/encyclopedie/data/images/1009656-Drapeau_de_la_Croix-Rouge.jpg">
+  <style>
+    /* CONTAINER BOXED LAYOUT*/
+    /* Ultra wide */
+    @media (max-width: 3840px) {
+    .c-box {--content-width: 55%;}}
+    /* Desktop */
+    @media (max-width: 1920px) {
+    .c-box {--content-width: 65%;}}
+    /* Laptop big */
+    @media (max-width: 1600px) {
+    .c-box {--content-width: 74%;}}
+    /* Laptop small */
+    @media (max-width: 1366px) {
+    .c-box {--content-width: 77%;}}
+    /* Tablet portrait */
+    @media (max-width: 1200px) {
+    .c-box {--content-width: 80%;}}
+    /* Mobile */
+    @media (max-width: 767px) {
+    .c-box {--content-width: 85%;}}
+    </style>
   <style>
     body {
       background-color: #fde9e0; /* Couleur de fond initiale */
-      transition: background-color 1s ease; /* Transition de couleur */
     }
     .button-container {
       display: flex;
@@ -30,8 +53,8 @@
       position: fixed; /* Fixe le bandeau en haut de la fenêtre */
       top: 0; /* Place le bandeau au sommet de la fenêtre */
       left: 0; /* Aligne le bandeau à gauche de la fenêtre */
-      width: 100%; /* Largeur de 100% pour occuper toute la largeur de la fenêtre */
-      z-index: 9999; /* Assure que le bandeau est au-dessus de tout le contenu */
+      /*width: 100%; Largeur de 100% pour occuper toute la largeur de la fenêtre */
+      z-index: auto; /* Assure que le bandeau est au-dessus de tout le contenu */
     }
     /* Style des boutons */
     .bouton-rectangulaire {
@@ -61,12 +84,12 @@
     <h1><span style="font-size: 30px;"><strong>MedicDePoche3000</strong></span></h1>
     <div class="boutons">
       <button class="bouton-rectangulaire" title="Questions récurrentes" onclick="openFile('.html')">FAQ</button>
-      <button class="bouton-rectangulaire bouton-espace" title="Les numéros à appeler en cas d'urgence" onclick="openFile('.html')">Les numéros importants</button>
+      <button class="bouton-rectangulaire bouton-espace" title="Les numéros à appeler en cas d'urgence" onclick="alert('15 - Samu (Service d\'Aide Médicale Urgente) : En cas d\'urgence médicale nécessitant une intervention rapide, notamment en cas d\'accident ou de malaise grave.\n\n18 - Pompiers : Pour signaler un incendie, un accident, ou toute autre situation nécessitant l\'intervention des pompiers, y compris les secours d\'urgence médicale dans certaines régions.\n\n112 - Numéro d\'urgence européen : Ce numéro peut être composé dans toute l\'Union européenne en cas d\'urgence, y compris médicale.\n\n114 - Numéro d\'urgence pour les personnes sourdes et malentendantes : Ce numéro permet aux personnes sourdes et malentendantes de contacter les services d\'urgence par SMS ou fax.\n\n116 117 - Numéro d\'appel médical de garde : Pour contacter un médecin de garde en dehors des heures d\'ouverture des cabinets médicaux, le soir, la nuit, le week-end et les jours fériés.\n\n0800 130 000 - Numéro vert Tabac Info Service : Pour obtenir de l\'aide et des conseils pour arrêter de fumer.\n\n0800 235 236 - Numéro vert Sida Info Service : Pour obtenir des informations et un soutien concernant le VIH/sida.');">Les numéros importants</button>
       <button class="bouton-rectangulaire bouton-espace" title="Les auteurs de ce site et les aides" onclick="openFile('.html')">Crédits</button>
       <button class="bouton-rectangulaire bouton-espace" title="Pas besoin de l'expliquer" onclick="openFile('.html')">Nous supporter (gros rat)</button>
     </div>
   </header>
-  <img src="Corps.png" alt="image_corps_page_d-accueil" width="300" height="500">
+  <img src="Corps.png" alt="image_corps_page_d-accueil" width="300" height="500" class="image-corps">
 
   <!-- Chatbox réduite -->
   <div class="chatbox-minimized" onclick="toggleChatbox()">
@@ -201,14 +224,15 @@
   }
 </script>
   <!-- Autres boutons -->
-  <input type="button" value="Mains" onclick="openFile('blessures_mains.html')" class="invisible-button" id="button-mains">
-  <input type="button" value="Mains" onclick="openFile('blessures_mains.html')" class="invisible-button" id="button-mains2">
-  <input type="button" value="Torse" onclick="openFile('blessures_torse.html')" class="square-button invisible-button" id="button-torse">
-  <input type="button" value="Jambes" onclick="openFile('blessures_jambes.html')" class="square-button invisible-button" id="button-jambes">
-  <input type="button" value="Tête" onclick="openFile('blessures_tete.html')" class="rectangle-button invisible-button" id="button-tete">
-  <input type="button" value="Bras" onclick="openFile('blessures_bras.html')" class="line-button invisible-button" id="button-arms">
-  <input type="button" value="Bras" onclick="openFile('blessures_bras.html')" class="line-button invisible-button" id="button-arms2">
-  <button onclick="convertTextToSpeech()">Convertir en discours</button>
+  <img src="MainD.jpg" value="Mains" onclick="openFile('blessures_mains.html')" class="main-button invisible-button" id="button-mains">
+  <img src="MainG.jpg" value="Mains" onclick="openFile('blessures_mains.html')" class="main-button invisible-button" id="button-mains2">
+  <img src="Torse.jpg" value="Torse" onclick="openFile('blessures_torse.html')" class="square-button invisible-button" id="button-torse">
+  <img src="JambeD.jpg" value="Jambes" onclick="openFile('blessures_jambes.html')" class="square-button invisible-button" id="button-jambes">
+  <img src="JambeG.jpg" value="Jambes" onclick="openFile('blessures_jambes.html')" class="square-button invisible-button" id="button-jambes2">
+  <img src="Tête.jpg" value="Tête" onclick="openFile('blessures_tete.html')" class="rectangle-button invisible-button" id="button-tete">
+  <img src="brasG.jpg" value="Bras" onclick="openFile('blessures_bras.html')" class="line-button invisible-button" id="button-arms">
+  <img src="brasD.jpg" value="Bras" onclick="openFile('blessures_bras.html')" class="line-button invisible-button" id="button-arms2">
+  <button onclick="convertTextToSpeech()" class="bouton-tts">Convertir en discours</button>
 
   <script>
     function convertTextToSpeech() {
