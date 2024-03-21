@@ -47,43 +47,48 @@ img {
 
 #button-mains {
   position: relative;
-  top: -50%; /* 298px / 600px * 100 */
+  top: -0%; /* 298px / 600px * 100 */
   left: 0%; /* 600px / 1000px * 100 */
 }
 
 #button-mains2 {
   position: relative;
-  top: -50%; /* 298px / 600px * 100 */
+  top: -0%; /* 298px / 600px * 100 */
   right: 0%; /* 600px / 1000px * 100 */
 }
 
 #button-arms {
   position: relative;
-  top: -70%; /* 350px / 600px * 100 */
-  right: 0%; /* 600px / 1000px * 100 */
+  top: -115%; /* 350px / 600px * 100 */
+  right: 5%; /* 600px / 1000px * 100 */
 }
 
 #button-arms2 {
   position: relative;
-  top: -50%; /* 350px / 600px * 100 */
-  left: 0%; /* 600px / 1000px * 100 */
+  top: -143.5%; /* 350px / 600px * 100 */
+  left: 5%; /* 600px / 1000px * 100 */
 }
 
 #button-torse {
   position:relative;
-  top: -21.35%; /* 150px / 600px * 100 */
+  top: -32.5%; /* 150px / 600px * 100 */
   right: 0%; /* 647.5px / 1000px * 100 */
 }
 
 #button-tete {
   position: relative;
-  top: -98%; /* 545px / 600px * 100 */
+  top: -117%; /* 545px / 600px * 100 */
   left: 0%; /* 658px / 1000px * 100 */
 }
 
 #button-jambes {
   position: relative;
-  top: 0%; /* 150px / 600px * 100 */
+  top: -10%; /* 150px / 600px * 100 */
+  right: 0%; /* 645px / 1000px * 100 */
+}
+#button-jambes2 {
+  position: relative;
+  top: -30%; /* 150px / 600px * 100 */
   right: 0%; /* 645px / 1000px * 100 */
 }
 
@@ -103,8 +108,8 @@ img {
 }
 
 .line-button {
-  width: 4vw; /* Largeur du bouton bras */
-  height: 8vw; /* Hauteur du bouton bras */
+  width: 3.5vw; /* Largeur du bouton bras */
+  height: 12vw; /* Hauteur du bouton bras */
 }
 
 .main-button {
