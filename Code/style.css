@@ -179,7 +179,7 @@ img {
 /* Style du bouton de fermeture */
 .close-button {
   position: fixed;
-  top: 648px;
+  bottom: 25px;
   right: 25px;
   cursor: pointer;
 }
