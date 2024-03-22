@@ -98,8 +98,8 @@ img {
   left: 3.33%; /* 20px / 1000px * 100 */
 }
 .square-button {
-  width: 5vw; /* Largeur du bouton jambe/ torse*/
-  height: 11vw; /* Hauteur du bouton */
+  width: 4.5vw; /* Largeur du bouton jambe/ torse*/
+  height: 16vw; /* Hauteur du bouton */
 }
 
 .rectangle-button {
@@ -115,6 +115,11 @@ img {
 .main-button {
   width: 2vw; /* Largeur du bouton main*/
   height: 2vw; /* Hauteur du bouton */
+}
+
+.torse-button {
+  width:5vw;
+  height:12vw;
 }
 
 /* Chatbox réduite */
@@ -198,14 +203,7 @@ img {
   opacity: 100; /* Masque visuellement le bouton */
   pointer-events: auto; /* Permet aux événements de pointer d'être détectés */
 }
-.entete {
-  background-color: #6cdd9d;
-  color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .croix img {
   margin-right: 10px;
@@ -223,13 +221,7 @@ img {
   margin-left: 10px;
   cursor: pointer;
 }
-.bandeau-entete {
-  position: relative; /* Fixe le bandeau en haut de la fenêtre */
-  top: 50%; /* Place le bandeau au sommet de la fenêtre */
-  left: 50%; /* Aligne le bandeau à gauche de la fenêtre */
-  width: 100%; /* Largeur de 100% pour occuper toute la largeur de la fenêtre */
-  /* z-index: 9999; Assure que le bandeau est au-dessus de tout le contenu */
-}
+
 .bouton-tts {
   position :relative;
   top: -50%;
@@ -237,6 +229,9 @@ img {
 }
 .image-corps {
   position: relative;
-  top:50%;
+  top:10%;
   left : 0%
+}
+.titre {
+  color: hsl(0, 0%, 0%); /* Changer la couleur du texte en rouge (vous pouvez utiliser n'importe quelle couleur CSS ici) */
 }
