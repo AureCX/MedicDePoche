@@ -57,6 +57,7 @@
   left: 0; /* Aligne le bandeau à gauche de la fenêtre */
   width: 100%; /*Largeur de 100% pour occuper toute la largeur de la fenêtre */
   z-index: auto; /* Assure que le bandeau est au-dessus de tout le contenu */
+  height: 100px; /* Hauteur du bandeau */
 }
 
     /* Style des boutons */
@@ -97,7 +98,7 @@
   <!-- Carte de zones cliquables -->
   <map name="corpsMap">
     <!-- Zone pour la tête -->
-    <area shape="rect" coords="120,10,150,75" alt="Tête" onclick="openPopup('blessures_tete.html')" style="cursor: pointer;">
+    <area shape="rect" coords="120,10,175,75" alt="Tête" onclick="openPopup('blessures_tete.html')" style="cursor: pointer;">
     <!-- Zone pour le torse -->
     <area shape="rect" coords="100,100,200,250" alt="Torse" onclick="openPopup('blessures_torse.html')" style="cursor: pointer;">
     <!-- Zone pour les mains -->
