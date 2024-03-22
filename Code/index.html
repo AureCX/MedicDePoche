@@ -8,9 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/jpeg" href="https://www.larousse.fr/encyclopedie/data/images/1009656-Drapeau_de_la_Croix-Rouge.jpg">
   <style>
-     area {
-    outline: 2px solid red; /* Ajoute une bordure rouge autour des zones cliquables */
-  }
     /* CONTAINER BOXED LAYOUT*/
     /* Ultra wide */
     @media (max-width: 3840px) {
@@ -81,6 +78,9 @@
     .bouton-espace {
       margin-right: 10px; /* Ajoute un espacement à droite entre les boutons */
     }
+    area {
+    outline: 2px solid red; /* Ajoute une bordure rouge autour des zones cliquables */
+  }
   </style>
   
 </head>
@@ -99,13 +99,18 @@
 
   <!-- Carte de zones cliquables -->
   <map name="corpsMap">
-    <!-- Zone pour les mains -->
+    <!-- Zone pour la tête -->
     <area shape="rect" coords="120,10,150,75" alt="Tête" href="blessures_tete.html">
     <!-- Zone pour le torse -->
-    <area shape="rect" coords="160,50,260,250" alt="Torse" href="blessures_torse.html">
-    <!-- Zone pour la tête -->
-    <area shape="rect" coords="70,260,230,400" alt="Mains" href="blessures_mains.html">
-    <!-- Ajoutez d'autres zones cliquables selon vos besoins -->
+    <area shape="rect" coords="100,100,200,250" alt="Torse" href="blessures_torse.html">
+    <!-- Zone pour les mains -->
+    <area shape="rect" coords="70,260,230,280" alt="Mains" href="blessures_mains.html">
+    <!-- Zone pour les jambes -->
+    <area shape="rect" coords="80,265,210,475" alt="Jambes" href="blessures_jambes.html">
+    <!--Zone pour le bras gauche-->
+    <area shape="rect" coords="70,100,90,260" alt="brasG" href="blessures_bras.html">
+    <!--Zone pour le bras droit-->
+    <area shape="rect" coords="210,100,240,260" alt="brasD" href="blessures_bras.html">
   </map>
 
   <!-- Chatbox réduite -->
@@ -243,16 +248,8 @@
     }
   }
 </script>
-  <!-- Autres boutons -->
-  <!-- <img src="MainD.jpg" value="Mains" onclick="openFile('blessures_mains.html')" class="main-button invisible-button" id="button-mains">
-  <img src="MainG.jpg" value="Mains" onclick="openFile('blessures_mains.html')" class="main-button invisible-button" id="button-mains2">
-  <img src="Torse.jpg" value="Torse" onclick="openFile('blessures_torse.html')" class="torse-button invisible-button" id="button-torse">
-  <img src="JambeD.jpg" value="Jambes" onclick="openFile('blessures_jambes.html')" class="square-button invisible-button" id="button-jambes">
-  <img src="JambeG.jpg" value="Jambes" onclick="openFile('blessures_jambes.html')" class="square-button invisible-button" id="button-jambes2">
-  <img src="Tête.jpg" value="Tête" onclick="openFile('blessures_tete.html')" class="rectangle-button invisible-button" id="button-tete">
-  <img src="brasG.jpg" value="Bras" onclick="openFile('blessures_bras.html')" class="line-button invisible-button" id="button-arms">
-  <img src="brasD.jpg" value="Bras" onclick="openFile('blessures_bras.html')" class="line-button invisible-button" id="button-arms2"> -->
-  <button onclick="convertTextToSpeech()" class="bouton-tts">Convertir en discours</button>
+
+<img src="accessibility.png" alt="Accessibilité" onclick="convertTextToSpeech()" class="bouton-tts">
 
   <script>
     function convertTextToSpeech() {

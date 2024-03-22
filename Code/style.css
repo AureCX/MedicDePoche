@@ -45,81 +45,10 @@ img {
   height: 100%;
 }
 
-#button-mains {
-  position: relative;
-  top: -0%; /* 298px / 600px * 100 */
-  left: 0%; /* 600px / 1000px * 100 */
-}
-
-#button-mains2 {
-  position: relative;
-  top: -0%; /* 298px / 600px * 100 */
-  right: 0%; /* 600px / 1000px * 100 */
-}
-
-#button-arms {
-  position: relative;
-  top: -115%; /* 350px / 600px * 100 */
-  right: 5%; /* 600px / 1000px * 100 */
-}
-
-#button-arms2 {
-  position: relative;
-  top: -143.5%; /* 350px / 600px * 100 */
-  left: 5%; /* 600px / 1000px * 100 */
-}
-
-#button-torse {
-  position:relative;
-  top: -32.5%; /* 150px / 600px * 100 */
-  right: 0%; /* 647.5px / 1000px * 100 */
-}
-
-#button-tete {
-  position: relative;
-  top: -117%; /* 545px / 600px * 100 */
-  left: 0%; /* 658px / 1000px * 100 */
-}
-
-#button-jambes {
-  position: relative;
-  top: -10%; /* 150px / 600px * 100 */
-  right: 0%; /* 645px / 1000px * 100 */
-}
-#button-jambes2 {
-  position: relative;
-  top: -30%; /* 150px / 600px * 100 */
-  right: 0%; /* 645px / 1000px * 100 */
-}
-
 .button-container {
   position: relative;
   top: 3.33%; /* 20px / 600px * 100 */
   left: 3.33%; /* 20px / 1000px * 100 */
-}
-.square-button {
-  width: 4.5vw; /* Largeur du bouton jambe/ torse*/
-  height: 16vw; /* Hauteur du bouton */
-}
-
-.rectangle-button {
-  width: 4.5vw; /* Largeur du bouton tête */
-  height: 5.5vw; /* Hauteur du bouton */
-}
-
-.line-button {
-  width: 3.5vw; /* Largeur du bouton bras */
-  height: 12vw; /* Hauteur du bouton bras */
-}
-
-.main-button {
-  width: 2vw; /* Largeur du bouton main*/
-  height: 2vw; /* Hauteur du bouton */
-}
-
-.torse-button {
-  width:5vw;
-  height:12vw;
 }
 
 /* Chatbox réduite */
@@ -224,8 +153,11 @@ img {
 
 .bouton-tts {
   position :relative;
-  top: -50%;
-  left: 0%
+  bottom: -80px;
+  left:-650px;
+  width:60px;
+  height:50px;
+  cursor: pointer;
 }
 .image-corps {
   position: relative;
