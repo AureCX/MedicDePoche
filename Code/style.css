@@ -172,3 +172,8 @@ img {
   top:20%;
   left : 0%
 }
+.texte {
+  position: relative;
+  top: -40%;
+  left: -30%;
+}
