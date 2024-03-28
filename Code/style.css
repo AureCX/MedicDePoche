@@ -167,6 +167,7 @@ img {
 .titre {
   color: hsl(0, 0%, 0%); /* Changer la couleur du texte en rouge (vous pouvez utiliser n'importe quelle couleur CSS ici) */
 }
+
 .faq-content {
   position: relative;
   top:20%;
