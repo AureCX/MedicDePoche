@@ -167,7 +167,7 @@ img {
 .titre {
   color: hsl(0, 0%, 0%); /* Changer la couleur du texte en rouge (vous pouvez utiliser n'importe quelle couleur CSS ici) */
 }
-<<<<<<< Updated upstream
+
 .faq-content {
   position: relative;
   top:20%;
@@ -177,10 +177,4 @@ img {
   position: relative;
   top: -40%;
   left: -30%;
-=======
-.texte {
-  position: relative;
-  top: -200px;
-  left : -120%
->>>>>>> Stashed changes
 }
