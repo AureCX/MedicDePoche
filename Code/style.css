@@ -161,19 +161,18 @@ img {
 }
 .image-corps {
   position: relative;
-  top:11%;
+  top:15%;
   left : 0%
 }
 .titre {
   color: hsl(0, 0%, 0%); /* Changer la couleur du texte en rouge (vous pouvez utiliser n'importe quelle couleur CSS ici) */
 }
-.faq-content {
-  position: relative;
-  top:20%;
-  left : 0%
-}
 .texte {
   position: relative;
   top: -40%;
   left: -30%;
+}
+.faq-content {
+  color: black;
+  text-align: center;
 }
