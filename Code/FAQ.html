@@ -7,7 +7,40 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
       .faq-content {
-          margin-top: 250px; /* Ajoute une marge supérieure de 100px */
+        margin-top: 700px; /* Ajoute une marge supérieure de 700px */
+      }
+      .footer {
+        background-color: #6cdd9d;
+        padding: 20px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      .contactez-nous {
+        color: #fff;
+      }
+      .contactez-nous form input[type="text"],
+      .contactez-nous form input[type="email"],
+      .contactez-nous form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        background-color: #fde9e0;
+      }
+      .contactez-nous form textarea {
+        height: 100px;
+      }
+      .contactez-nous form button {
+        background-color: #fff;
+        color: #6cdd9d;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
       }
   </style>
 </head>
@@ -65,7 +98,75 @@
                 <button class="bouton-rectangulaire bouton-espace" title="Pas besoin de l'expliquer" onclick="openFile('.html')">Nous supporter</button>
               </div>
             </header>
-    <div class="faq-content">
+            <script>
+              function openPopup(url) {
+              window.open(url, "popup", "width=600,height=600");
+            }
+              function showEmergencyNumbers() {
+              var modal = document.getElementById("myModal");
+              modal.style.display = "block";
+            }
+        
+            function hideModal() {
+              var modal = document.getElementById("myModal");
+              modal.style.display = "none";
+            }
+          </script>
+        
+          <!-- Modal -->
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="hideModal()">&times;</span>
+              <p><b>15 - Samu (Service d'Aide Médicale Urgente) :</b> En cas d'urgence médicale nécessitant une intervention rapide, notamment en cas d'accident ou de malaise grave.</p>
+              <p><b>18 - Pompiers :</b> Pour signaler un incendie, un accident, ou toute autre situation nécessitant l'intervention des pompiers, y compris les secours d'urgence médicale dans certaines régions.</p>
+              <p><b>112 - Numéro d'urgence européen :</b> Ce numéro peut être composé dans toute l'Union européenne en cas d'urgence, y compris médicale.</p>
+              <p><b>114 - Numéro d'urgence pour les personnes sourdes et malentendantes :</b> Ce numéro permet aux personnes sourdes et malentendantes de contacter les services d'urgence par SMS ou fax.</p>
+              <p><b>116 117 - Numéro d'appel médical de garde :</b> Pour contacter un médecin de garde en dehors des heures d'ouverture des cabinets médicaux, le soir, la nuit, le week-end et les jours fériés.</p>
+              <p><b>0800 130 000 - Numéro vert Tabac Info Service :</b> Pour obtenir de l'aide et des conseils pour arrêter de fumer.</p>
+              <p><b>0800 235 236 - Numéro vert Sida Info Service :</b> Pour obtenir des informations et un soutien concernant le VIH/sida.</p>
+            </div>
+          </div>
+        
+          <style>
+            /* The Modal (background) */
+            .modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              left: 0;
+              top: 0;
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+        
+            /* Modal Content/Box */
+            .modal-content {
+              background-color: #fefefe;
+              margin: 15% auto; /* 15% from the top and centered */
+              padding: 20px;
+              border: 1px solid #888;
+              width: 80%; /* Could be more or less, depending on screen size */
+            }
+        
+            /* The Close Button */
+            .close {
+              color: #aaaaaa;
+              float: right;
+              font-size: 28px;
+              font-weight: bold;
+            }
+        
+            .close:hover,
+            .close:focus {
+              color: #000;
+              text-decoration: none;
+              cursor: pointer;
+            }
+          </style>
+            <div class="faq-content">
         <!-- Contenu de la FAQ ici -->
         <h2>FAQ - MedicDePoche3000</h2>
         <p><strong>Bienvenue sur la page FAQ de MedicDePoche3000 ! Ici vous allez pouvoir trouver les réponses à nos questions les plus fréquentes, et si vous ne trouvez pas la réponse, n'hésitez pas à nous envoyer un email en bas de la page !</strong></p>
@@ -88,5 +189,19 @@
         <p>Comment puis-je contacter l'équipe de support technique ou fournir des commentaires sur le site ?</p>
         <!-- Ajoutez d'autres questions et réponses selon vos besoins -->
     </div>
+    <footer class="footer">
+      <div class="contactez-nous">
+          <h2>Contactez-nous</h2>
+          <form action="envoyer_email.php" method="post">
+              <label for="nom">Nom :</label>
+              <input type="text" id="nom" name="nom" required>
+              <label for="email">Email :</label>
+              <input type="email" id="email" name="email" required>
+              <label for="message">Message :</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+              <button type="submit">Envoyer</button>
+          </form>
+      </div>
+  </footer>  
 </body>
 </html>
