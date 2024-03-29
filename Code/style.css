@@ -161,7 +161,7 @@ img {
 }
 .image-corps {
   position: relative;
-  top:15%;
+  top:20%;
   left : 0%
 }
 .titre {
@@ -169,8 +169,10 @@ img {
 }
 .texte {
   position: relative;
-  top: -40%;
-  left: -30%;
+  width: 300px;
+  height: 300px;
+  top: -30%;
+  left: -20%;
 }
 .faq-content {
   color: black;
