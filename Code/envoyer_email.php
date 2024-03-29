@@ -31,4 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: contact.php");
     exit;
 }
+if (mail($destinataire, $sujet, $contenu, $entetes)) {
+    // Votre message a bien été envoyé, rediriger vers la page FAQ
+    header("Location: FAQ.html");
+    exit; // Assurez-vous de terminer l'exécution du script après la redirection
+} else {
+    echo "Une erreur s'est produite lors de l'envoi du message.";
+}
 ?>
