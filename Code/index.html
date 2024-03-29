@@ -115,6 +115,21 @@
     <span style="font-size: 30px;"><strong>Cliquez où vous avez mal</strong></span>
   </h1>
 
+   <head>
+    <title>Page avec Pop-up</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            // Fonction pour afficher la fenêtre pop-up
+            function afficherPopup() {
+                alert("Bienvenue sur notre site ! (Ce site a été créer par des lycéens(pas très doués) et donc il remplacera jamais un professionel de la santé)");
+            }
+
+            // Appeler la fonction afficherPopup lorsque la page est chargée
+            afficherPopup();
+        };
+    </script>
+ </head>
+
   <script>
     function openPopup(url) {
       window.open(url, "popup", "width=600,height=600");
