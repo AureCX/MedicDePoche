@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
       .faq-content {
-        margin-top: 700px; /* Ajoute une marge supérieure de 700px */
+        margin-top: 800px; /* Ajoute une marge supérieure de 800px */
       }
       .footer {
         background-color: #6cdd9d;
@@ -23,7 +23,7 @@
       .contactez-nous form input[type="text"],
       .contactez-nous form input[type="email"],
       .contactez-nous form textarea {
-        width: 100%;
+        width: 50%;
         padding: 10px;
         margin: 5px 0;
         box-sizing: border-box;
@@ -42,6 +42,19 @@
         border-radius: 5px;
         cursor: pointer;
       }
+      /* Style pour le formulaire d'email */
+      #email-chatbox {
+            display: none; /* Caché par défaut */
+            position: fixed; /* Position fixe pour rester en bas de la page */
+            bottom: 0;
+            right: 0;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+            width: 200px;
+            height: 300px;
+            padding: 10px;
+            overflow-y: auto; /* Ajoute une barre de défilement verticale si le contenu dépasse */
+        }
   </style>
 </head>
 <body>
@@ -166,42 +179,59 @@
               cursor: pointer;
             }
           </style>
-            <div class="faq-content">
-        <!-- Contenu de la FAQ ici -->
-        <h2>FAQ - MedicDePoche3000</h2>
-        <p><strong>Bienvenue sur la page FAQ de MedicDePoche3000 ! Ici vous allez pouvoir trouver les réponses à nos questions les plus fréquentes, et si vous ne trouvez pas la réponse, n'hésitez pas à nous envoyer un email en bas de la page !</strong></p>
-        <p>Qu'est-ce que MedicDePoche3000 ?</p>
-        <p>R: Réponse à la question 1.</p>
-        <p>Comment puis-je utiliser ce site pour obtenir de l'aide en cas d'urgence médicale ?</p>
-        <p>R: Réponse à la question 2.</p>
-        <p>Quels sont les numéros d'urgence à composer en cas d'accident ou de problème de santé grave ?</p>
-        <p>Quelles sont les étapes à suivre en cas de blessure légère à la maison ?</p>
-        <p>Comment puis-je reconnaître les signes d'une situation médicale urgente ?</p>
-        <p>Quels sont les équipements de premiers secours essentiels à avoir à la maison ou en voyage ?</p>
-        <p>Comment puis-je traiter une brûlure mineure à la maison ?</p>
-        <p>Que faire en cas de saignement abondant ?</p>
-        <p>Comment reconnaître et agir en cas de crise cardiaque ou d'accident vasculaire cérébral (AVC) ?</p>
-        <p>Comment administrer les premiers soins en cas d'intoxication alimentaire ou de piqûre d'insecte ?</p>
-        <p>Y a-t-il des précautions particulières à prendre en cas de voyage à l'étranger en matière de santé ?</p>
-        <p>Comment prévenir les accidents domestiques courants, notamment chez les enfants ?</p>
-        <p>Que faire en cas d'urgence médicale chez un animal de compagnie ?</p>
-        <p>Comment fonctionne le système de chat pour obtenir de l'aide supplémentaire ?</p>
-        <p>Comment puis-je contacter l'équipe de support technique ou fournir des commentaires sur le site ?</p>
-        <!-- Ajoutez d'autres questions et réponses selon vos besoins -->
+        <div class="faq-content">
+          <!-- Contenu de la FAQ ici -->
+          <h2>FAQ - MedicDePoche3000</h2>
+          <p><strong>Bienvenue sur la page FAQ de MedicDePoche3000 ! Ici vous allez pouvoir trouver les réponses à nos questions les plus fréquentes, et si vous ne trouvez pas la réponse, n'hésitez pas à nous envoyer un email en bas de la page !</strong></p>
+          <p>Qu'est-ce que MedicDePoche3000 ?</p>
+          <p>R: Réponse à la question 1.</p>
+          <p>Comment puis-je utiliser ce site pour obtenir de l'aide en cas d'urgence médicale ?</p>
+          <p>R: Réponse à la question 2.</p>
+          <p>Quels sont les numéros d'urgence à composer en cas d'accident ou de problème de santé grave ?</p>
+          <p>Quelles sont les étapes à suivre en cas de blessure légère à la maison ?</p>
+          <p>Comment puis-je reconnaître les signes d'une situation médicale urgente ?</p>
+          <p>Quels sont les équipements de premiers secours essentiels à avoir à la maison ou en voyage ?</p>
+          <p>Comment puis-je traiter une brûlure mineure à la maison ?</p>
+          <p>Que faire en cas de saignement abondant ?</p>
+          <p>Comment reconnaître et agir en cas de crise cardiaque ou d'accident vasculaire cérébral (AVC) ?</p>
+          <p>Comment administrer les premiers soins en cas d'intoxication alimentaire ou de piqûre d'insecte ?</p>
+          <p>Y a-t-il des précautions particulières à prendre en cas de voyage à l'étranger en matière de santé ?</p>
+          <p>Comment prévenir les accidents domestiques courants, notamment chez les enfants ?</p>
+          <p>Que faire en cas d'urgence médicale chez un animal de compagnie ?</p>
+          <p>Comment fonctionne le système de chat pour obtenir de l'aide supplémentaire ?</p>
+          <p>Comment puis-je contacter l'équipe de support technique ou fournir des commentaires sur le site ?</p>
+          <!-- Ajoutez d'autres questions et réponses selon vos besoins -->
+        </div>
+        <footer class="footer">
+           <!-- Bouton pour ouvrir la chatbox d'email -->
+    <button onclick="toggleEmailChatbox()">Contactez-nous</button>
+
+    <!-- Formulaire d'email (chatbox) -->
+    <div id="email-chatbox">
+        <h2>Contactez-nous</h2>
+        <form action="envoyer_email.php" method="post">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <button onclick="toggleEmailChatbox()">Fermer</button> <!-- Bouton pour fermer la chatbox -->
     </div>
-    <footer class="footer">
-      <div class="contactez-nous">
-          <h2>Contactez-nous</h2>
-          <form action="envoyer_email.php" method="post">
-              <label for="nom">Nom :</label>
-              <input type="text" id="nom" name="nom" required>
-              <label for="email">Email :</label>
-              <input type="email" id="email" name="email" required>
-              <label for="message">Message :</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-              <button type="submit">Envoyer</button>
-          </form>
-      </div>
-  </footer>  
-</body>
-</html>
+          </div>
+          <script>
+            // Fonction pour afficher ou cacher la chatbox d'email
+            function toggleEmailChatbox() {
+                var chatbox = document.getElementById("email-chatbox");
+                if (chatbox.style.display === "none") {
+                    chatbox.style.display = "block";
+                } else {
+                    chatbox.style.display = "none";
+                }
+            }
+            </script>
+      </footer>  
+    </body>
+    </html>
