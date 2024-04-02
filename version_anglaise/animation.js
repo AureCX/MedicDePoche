@@ -71,7 +71,7 @@ function askChatGPT(question) {
           addMessage(answer, false);
       } else {
           // Si aucune réponse n'est renvoyée, afficher un message d'erreur
-          addMessage("Désolé, aucune réponse n'a été trouvée.", false);
+          addMessage("Sorry, nothing has been found.", false);
       }
   })
   .catch(error => {
