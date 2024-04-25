@@ -175,6 +175,9 @@ img {
   left: -20%;
 }
 .faq-content {
+  margin-top: 580px;
   color: black;
   text-align: center;
+  overflow-y: auto;
+  max-height: 485px; /* Définir une hauteur maximale pour l'élément */
 }
