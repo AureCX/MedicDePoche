@@ -1,0 +1,183 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  margin: 0;
+  font-family: Arial, sans-serif ; /* Changer la police */
+  color: hwb(0 0% 100%) ; /* Changer la couleur du texte */
+  background-color: #ffffff; /* Couleur de fond initiale */
+}
+
+.welcome-message {
+  position: relative;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.cross-image-left {
+  position: absolute;
+  left: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cross-image-right {
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Positionne les boutons */
+.button-container {
+  text-align: center;
+}
+
+/* Assuming a hypothetical container size of 1000px width and 600px height */
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.button-container {
+  position: relative;
+  top: 3.33%; /* 20px / 600px * 100 */
+  left: 3.33%; /* 20px / 1000px * 100 */
+}
+
+/* Chatbox réduite */
+.chatbox-minimized {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chatbox-minimized img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Chatbox complète */
+.chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  display: none;
+}
+
+.chatbox-visible {
+  display: block;
+}
+
+/* Style des messages */
+.chat-messages {
+  height: 200px;
+  overflow-y: auto;
+}
+
+/* Style de la zone de saisie */
+.chat-input {
+  margin-top: 10px;
+}
+
+.chat-input input[type="text"] {
+  width: 200px;
+  padding: 5px;
+}
+
+.chat-input button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}
+/* Style du bouton de fermeture */
+.close-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+
+/* Style de l'image de la croix rouge */
+.close-button img {
+  filter: brightness(0) invert(1); /* Inversion des couleurs pour obtenir une croix rouge */
+}
+/* CSS pour rendre les boutons invisibles */
+.invisible-button {
+  opacity: 100; /* Masque visuellement le bouton */
+  pointer-events: auto; /* Permet aux événements de pointer d'être détectés */
+}
+
+
+.croix img {
+  margin-right: 10px;
+}
+
+.boutons button {
+  background-color: #6cdd9d;
+  color: black;
+  padding: 10px 20px;
+  border-top: none; /* Supprimer la bordure supérieure */
+  border-bottom: none; /* Supprimer la bordure inférieure */
+  border-left: 1px solid black; /* Bordure gauche */
+  border-right: 1px solid black; /* Bordure droite */
+  border-radius: 0; /* Supprimer le bord arrondi */
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.bouton-tts {
+  position :fixed;
+  bottom: 20px;
+  left:20px;
+  width:60px;
+  height:50px;
+  cursor: pointer;
+}
+.image-corps {
+  position: relative;
+  top:20%;
+  left : 0%
+}
+.titre {
+  color: hsl(0, 0%, 0%); /* Changer la couleur du texte en rouge (vous pouvez utiliser n'importe quelle couleur CSS ici) */
+}
+.texte {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  top: -30%;
+  left: -20%;
+}
+.faq-content {
+  margin-top: 580px;
+  color: black;
+  text-align: center;
+  overflow-y: auto;
+  max-height: 485px; /* Définir une hauteur maximale pour l'élément */
+}
