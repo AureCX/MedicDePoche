@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MedicDePoche3000</title>
+  <html lang="fr"></html>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="description" content="Bienvenue sur MedicDePoche3000, votre assistant de blessures chez vous, et partout !">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpeg" href="https://www.larousse.fr/encyclopedie/data/images/1009656-Drapeau_de_la_Croix-Rouge.jpg">
+  <style>
+    /* CONTAINER BOXED LAYOUT*/
+    /* Ultra wide */
+    @media (max-width: 3840px) {
+    .c-box {--content-width: 55%;}}
+    /* Desktop */
+    @media (max-width: 1920px) {
+    .c-box {--content-width: 65%;}}
+    /* Laptop big */
+    @media (max-width: 1600px) {
+    .c-box {--content-width: 74%;}}
+    /* Laptop small */
+    @media (max-width: 1366px) {
+    .c-box {--content-width: 77%;}}
+    /* Tablet portrait */
+    @media (max-width: 1200px) {
+    .c-box {--content-width: 80%;}}
+    /* Mobile */
+    @media (max-width: 767px) {
+    .c-box {--content-width: 85%;}}
+    </style>
+  <style>
+    body {
+      background-color: #fde9e0; /* Couleur de fond initiale */
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      width: 80%; /* Largeur fixe */
+      margin: 0 auto; /* Centrer horizontalement */
+    }
+
+    .button {
+      width: 120px; /* Largeur fixe */
+      height: 40px; /* Hauteur fixe */
+    }
+    /* Style du bandeau d'entête */
+    .entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Aligner les éléments verticalement au centre */
+  background-color: #6cdd9d;
+  color: #6cdd9d;
+  padding: 10px; /* Ajoute un peu d'espacement autour du texte */
+  box-sizing: border-box; /* Inclut le rembourrage dans la largeur totale */
+  position: fixed; /* Fixe le bandeau en haut de la fenêtre */
+  top: 0; /* Place le bandeau au sommet de la fenêtre */
+  left: 0; /* Aligne le bandeau à gauche de la fenêtre */
+  width: 100%; /*Largeur de 100% pour occuper toute la largeur de la fenêtre */
+  z-index: auto; /* Assure que le bandeau est au-dessus de tout le contenu */
+  height: 100px; /* Hauteur du bandeau */
+}
+
+    /* Style des boutons */
+    .bouton-rectangulaire {
+      background-color: #6cdd9d; /* Couleur de fond */
+      color: #6cdd9d; /* Couleur du texte */
+      padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+      border: none; /* Supprime les bordures */
+      cursor: pointer; /* Curseur de la souris change en main lorsqu'il survole le bouton */
+      text-align: center; /* Centre le texte à l'intérieur du bouton */
+      display: inline-block; /* Permet de spécifier une largeur/hauteur à l'élément */
+      text-decoration: none; /* Supprime le soulignement du texte */
+      font-size: 16px; /* Taille du texte */
+      font-weight: bold; /* Poids de la police en gras */
+      outline: none; /* Supprime la bordure de focus */
+    }
+
+    /* Style pour les espacements entre les boutons */
+    .bouton-espace {
+      margin-right: 10px; /* Ajoute un espacement à droite entre les boutons */
+    }
+  </style>
+  
+</head>
+<body>
+  <header class="entete">
+    <h1 class="titre" style="margin: 0;"><span style="font-size: 30px;"><strong>MedicDePoche3000</strong></span></h1>
+    <div class="boutons">
+      <button class="bouton-rectangulaire bouton-espace" title="Retour à la page" onclick="window.location.href='index.html'">Home</button>
+      <button class="bouton-rectangulaire bouton-espace" title="Les numéros à appeler en cas d'urgence" onclick="showEmergencyNumbers()">Les numéros importants</button>
+      <button class="bouton-rectangulaire" title="Questions récurrentes" onclick="window.location.href='FAQ.html'">FAQ</button>
+      <button class="bouton-rectangulaire bouton-espace" title="Pas besoin de l'expliquer" onclick="openFile('.html')">Nous supporter</button>
+    </div>
+  </header>
