@@ -48,7 +48,7 @@ function toggleChatbox() {
 }
 function convertTextToSpeech() {
   // Texte à convertir en discours
-  var texte = "Hello, Welcome to PocketMedic3000, How are you? What do you want to know?";
+  var texte = "Bonjour, Bienvenue sur MedicdePhoche3000, Comment vas-tu? Que veut tu savoir?";
   
   // Créer un objet SpeechSynthesisUtterance
   var utterance = new SpeechSynthesisUtterance(texte);
@@ -66,7 +66,6 @@ function askChatGPT(question) {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer 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'
       },
       body: JSON.stringify({
           model: 'text-davinci-003', // Modèle GPT-3.5 à utiliser
