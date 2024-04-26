@@ -11,15 +11,16 @@ function addMessage(message) {
   }
   
   // Fonction pour gérer l'envoi de messages
-  function sendMessage() {
-    var input = document.getElementById('input');
-    var message = input.value.trim(); // Supprime les espaces vides au début et à la fin
-    if (message !== '') {
-      addMessage(message);
-      input.value = ''; // Efface le champ de texte après l'envoi du message
-      console.log('Message envoyé :', message);
-    }
+// Fonction pour gérer l'envoi de messages
+function sendMessage() {
+  var input = document.getElementById('input');
+  var message = input.value.trim(); // Supprime les espaces vides au début et à la fin
+  if (message !== '') {
+    askChatGPT(message); // Envoie la question à ChatGPT
+    input.value = ''; // Efface le champ de texte après l'envoi du message
+    console.log('Message envoyé :', message);
   }
+}
   
   // Ajouter un gestionnaire d'événements pour le clic sur le bouton d'envoi
   var sendButton = document.querySelector('button'); // Sélectionne le premier bouton trouvé
@@ -46,6 +47,20 @@ function toggleChatbox() {
     closeButton.style.display = "none"; // Masquer le bouton de fermeture
   }
 }
+
+    function convertTextToSpeech() {
+      // Texte à convertir en discours
+      var texte = "Hello, Welcome to PocketMedic3000, How are you? What do you want to know?";
+      
+      // Créer un objet SpeechSynthesisUtterance
+      var utterance = new SpeechSynthesisUtterance(texte);
+      
+      // Définir la langue en français
+      utterance.lang = 'fr-FR';
+      
+      // Utiliser l'API SpeechSynthesis pour parler
+      window.speechSynthesis.speak(utterance);
+    }
 function askChatGPT(question) {
   console.log('Question envoyée à ChatGPT :', question);
   // Envoyer la question à l'API de GPT-3.5 (vous devez remplacer 'YOUR_API_KEY' par votre clé API réelle)
@@ -53,7 +68,7 @@ function askChatGPT(question) {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer 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'
+          'Authorization': 'Bearer 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'
       },
       body: JSON.stringify({
           model: 'text-davinci-003', // Modèle GPT-3.5 à utiliser
