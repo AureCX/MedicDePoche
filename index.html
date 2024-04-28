@@ -89,7 +89,7 @@
       <button class="bouton-rectangulaire bouton-espace" title="Retour à la page" onclick="window.location.href='index.html'">Home</button>
       <button class="bouton-rectangulaire bouton-espace" title="Les numéros à appeler en cas d'urgence" onclick="showEmergencyNumbers()">Les numéros importants</button>
       <button class="bouton-rectangulaire" title="Questions récurrentes" onclick="window.location.href='FAQ.html'">FAQ</button>
-      <button class="bouton-rectangulaire bouton-espace" title="Pas besoin de l'expliquer" onclick="openFile('.html')">Nous supporter</button>
+      <button class="bouton-rectangulaire bouton-espace" title="Pas besoin de l'expliquer" onclick="window.location.href='noussupporter.html'">Nous supporter</button>
     </div>
   </header>
   
@@ -199,44 +199,17 @@
       cursor: pointer;
     }
   </style>
-</body>
-</html>
-  <!-- Chatbox réduite -->
-  <div class="chatbox-minimized" onclick="toggleChatbox()">
-    <img src="chat-icon.png" alt="Chat Icon" width="50" height="50">
-  </div>
-
-  <!-- Chatbox complète -->
-  <div class="chatbox" id="chatbox">
-    <div class="chat-messages" id="chat-messages">
-      <!-- Les messages de chat seront ajoutés ici -->
-    </div>
-    <div class="chat-input">
-      <input type="text" id="input" placeholder="Pose ta question ici" onkeypress="handleKeyPress(event)">
-      <button onclick="sendMessage()">Envoyer</button>
-    </div>
-  </div>
-
-  <style>
-    .close-button {
-      display: none; /* Par défaut, le bouton est caché */
+  <script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "q0SZzgK8LTJ4vGXr_oWMD",
+    domain: "www.chatbase.co"
     }
-
-    /* Afficher le bouton uniquement lorsque la chatbox est visible */
-    .chatbox-visible .close-button {
-      display: block;
-    }
-    .close-button img {
-    filter: none; /* Réinitialiser tous les filtres d'image */
-  }
-  </style>
-  <!-- Bouton pour fermer la chatbox -->
-<div class="close-button" onclick="toggleChatbox()">
-  <img src="x-rouge.png" alt="Fermer la chatbox" width="20" height="20">
-</div>
-
-<img src="accessibility.png" alt="Accessibilité" onclick="convertTextToSpeech()" class="bouton-tts">
-
-  <script src="animation.js"></script>
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="q0SZzgK8LTJ4vGXr_oWMD"
+    domain="www.chatbase.co"
+    defer>
+    </script>
 </body>
 </html>
