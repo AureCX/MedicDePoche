@@ -10,4 +10,18 @@ if (langueNavigateur.startsWith("fr")) {
     // Chargez la version par défaut du site si aucune langue n'est détectée
 }
 
+// JavaScript pour charger et appliquer les traductions
+fetch('fr.json') // Charger le fichier JSON de traduction approprié
+  .then(response => response.json())
+  .then(data => {
+    // Remplacer les chaînes de texte dans le document HTML
+    Object.keys(data).forEach(key => {
+      const element = document.getElementById(key);
+      if (element) {
+        element.textContent = data[key];
+      }
+    });
+  })
+  .catch(error => console.error('Error loading translations:', error));
+
 
