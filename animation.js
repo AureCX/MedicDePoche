@@ -1,93 +1,79 @@
-// JavaScript code
-  // Fonction pour ajouter un message à la chatbox
-function addMessage(message) {
-    var chatMessages = document.getElementById('chat-messages');
-    var newMessage = document.createElement('div');
-    newMessage.textContent = message;
-    chatMessages.appendChild(newMessage);
-    // Fait défiler automatiquement vers le bas pour afficher le dernier message
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-    console.log('Message ajouté à la chatbox :', message);
-  }
-  
-  // Fonction pour gérer l'envoi de messages
-  function sendMessage() {
-    var input = document.getElementById('input');
-    var message = input.value.trim(); // Supprime les espaces vides au début et à la fin
-    if (message !== '') {
-      askChatGPT(message); // Envoie la question à ChatGPT
-      input.value = ''; // Efface le champ de texte après l'envoi du message
-      console.log('Message envoyé :', message);
-    }
-  }
-  
-  // Ajouter un gestionnaire d'événements pour le clic sur le bouton d'envoi
-  var sendButton = document.querySelector('button'); // Sélectionne le premier bouton trouvé
-  sendButton.addEventListener('click', sendMessage);
-  
-  // Ajouter un gestionnaire d'événements pour la touche "Entrée" dans le champ de texte
-  var input = document.getElementById('input');
-  input.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-      sendMessage();
-    }
-  });
-// Fonction pour ouvrir et fermer la chatbox
-function toggleChatbox() {
-  var chatbox = document.getElementById("chatbox");
-  var closeButton = document.querySelector(".close-button"); // Sélectionner le bouton de fermeture
-  
-  chatbox.classList.toggle("chatbox-visible");
-  
-  // Vérifier si la chatbox est visible
-  if (chatbox.classList.contains("chatbox-visible")) {
-    closeButton.style.display = "block"; // Afficher le bouton de fermeture
-  } else {
-    closeButton.style.display = "none"; // Masquer le bouton de fermeture
-  }
+// Détecter la langue du navigateur
+var langueNavigateur = navigator.language || navigator.userLanguage;
+
+// Rediriger ou charger dynamiquement le contenu pour la langue détectée
+if (langueNavigateur.startsWith("fr")) {
+    window.location.href = "index_fr.html"; // Redirection vers la version française
+} else if (langueNavigateur.startsWith("es")) {
+    window.location.href = "index_es.html"; // Redirection vers la version espagnole
+} else {
+    // Chargez la version par défaut du site si aucune langue n'est détectée
 }
-function convertTextToSpeech() {
-  // Texte à convertir en discours
-  var texte = "Bonjour, Bienvenue sur MedicdePhoche3000, Comment vas-tu? Que veut tu savoir?";
-  
-  // Créer un objet SpeechSynthesisUtterance
-  var utterance = new SpeechSynthesisUtterance(texte);
-  
-  // Définir la langue en français
-  utterance.lang = 'fr-FR';
-  
-  // Utiliser l'API SpeechSynthesis pour parler
-  window.speechSynthesis.speak(utterance);
-}
-function askChatGPT(question) {
-  console.log('Question envoyée à ChatGPT :', question);
-  // Envoyer la question à l'API de GPT-3.5 (vous devez remplacer 'YOUR_API_KEY' par votre clé API réelle)
-  fetch('https://api.openai.com/v1/completions', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-          model: 'text-davinci-003', // Modèle GPT-3.5 à utiliser
-          prompt: question, // Question de l'utilisateur
-          max_tokens: 100 // Nombre maximal de tokens dans la réponse
-      })
-  })
+
+// JavaScript pour charger et appliquer les traductions
+fetch('fr.json') // Charger le fichier JSON de traduction approprié
   .then(response => response.json())
   .then(data => {
-      // Vérifier si data.choices est défini et non vide
-      if (data.choices && data.choices.length > 0) {
-          // Récupérer la réponse de ChatGPT
-          const answer = data.choices[0].text.trim();
-          // Afficher la réponse dans la chatbox
-          addMessage(answer, false);
-      } else {
-          // Si aucune réponse n'est renvoyée, afficher un message d'erreur
-          addMessage("Désolé, aucune réponse n'a été trouvée.", false);
+    // Remplacer les chaînes de texte dans le document HTML
+    Object.keys(data).forEach(key => {
+      const element = document.getElementById(key);
+      if (element) {
+        element.textContent = data[key];
       }
+    });
   })
-  .catch(error => {
-      console.error('Error:', error);
-  });
+  .catch(error => console.error('Error loading translations:', error));
+
+// Fonction pour afficher les numéros de secours en fonction du pays
+function afficherNumSecoursParPays(pays) {
+  var numsSecours;
+
+  // Sélectionnez les numéros de secours en fonction du pays
+  switch (pays) {
+      case "France":
+          numsSecours = {
+              "Samu": "15",
+              "Pompiers": "18",
+              "Numéro d'urgence européen": "112",
+              "Numéro d'urgence pour les personnes sourdes et malentendantes": "114",
+              "Numéro d'appel médical de garde": "116 117",
+              "Numéro vert Tabac Info Service": "0800 130 000",
+              "Numéro vert Sida Info Service": "0800 235 236"
+          };
+          break;
+      // Ajoutez d'autres pays avec leurs numéros de secours ici
+      default:
+          // Si le pays n'est pas reconnu, utilisez les numéros de secours par défaut
+          numsSecours = {
+              "Samu": "15",
+              "Pompiers": "18",
+              "Numéro d'urgence européen": "112"
+          };
+  }
+
+  // Affichez les numéros de secours dans la modal
+  var modalContent = document.querySelector(".modal-content");
+  modalContent.innerHTML = ""; // Effacez le contenu actuel de la modal
+
+  // Parcourez les numéros de secours et affichez-les dans la modal
+  for (var service in numsSecours) {
+      modalContent.innerHTML += "<p><b>" + service + " :</b> " + numsSecours[service] + "</p>";
+  }
 }
+
+// Fonction pour détecter automatiquement le pays de l'utilisateur
+function detecterPays() {
+  // Utilisez une API de géolocalisation pour obtenir le pays de l'utilisateur
+  // Vous pouvez utiliser des services comme GeoIP ou l'API de géolocalisation HTML5
+  // Par exemple, vous pouvez appeler une API externe pour obtenir les informations de géolocalisation de l'utilisateur
+  // Ensuite, utilisez les données de localisation pour déterminer le pays
+  // Ici, nous simulons simplement la détection de pays en utilisant une valeur statique
+  var pays = "France"; // Remplacez cette valeur par la vraie détection du pays
+
+  // Une fois que le pays est détecté, affichez les numéros de secours correspondants
+  afficherNumSecoursParPays(pays);
+}
+
+// Appeler la fonction de détection de pays au chargement de la page
+window.onload = detecterPays;
 
