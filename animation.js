@@ -23,6 +23,24 @@ fetch('fr.json') // Charger le fichier JSON de traduction approprié
     });
   })
   .catch(error => console.error('Error loading translations:', error));
+ // Fonction d'initialisation de la page
+function initPage() {
+  // Appeler la fonction pour détecter la langue du navigateur
+  detecterLangueNavigateur();
+
+  // Appeler la fonction de détection de pays au chargement de la page
+  detecterPays();
+}
+
+// Fonction pour détecter la langue du navigateur
+function detecterLangueNavigateur() {
+  var langue = navigator.language || navigator.userLanguage;
+  console.log("Langue du navigateur :", langue);
+  // Ajoutez le code pour la traduction du site en fonction de la langue détectée ici
+}
+
+// Appeler la fonction d'initialisation au chargement de la page
+window.onload = initPage;
 
 // Fonction pour afficher les numéros de secours en fonction du pays
 function afficherNumSecoursParPays(pays) {
@@ -74,6 +92,51 @@ function detecterPays() {
   afficherNumSecoursParPays(pays);
 }
 
-// Appeler la fonction de détection de pays au chargement de la page
-window.onload = detecterPays;
+// Fonction pour obtenir la position géographique de l'utilisateur
+function obtenirPositionUtilisateur() {
+  // Demander au navigateur de fournir la position géographique
+  navigator.geolocation.getCurrentPosition(
+      function(position) {
+          // Extraire les coordonnées de latitude et de longitude
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
 
+          // Appeler une fonction pour déterminer le pays en fonction des coordonnées
+          determinerPaysParCoordonnees(latitude, longitude);
+      },
+      function(error) {
+          console.error("Erreur de géolocalisation :", error);
+          // En cas d'erreur, vous pouvez gérer le problème ici
+      }
+  );
+}
+
+// Fonction pour déterminer le pays en fonction des coordonnées géographiques
+function determinerPaysParCoordonnees(latitude, longitude) {
+  // Ici, vous devrez utiliser un service tiers pour convertir les coordonnées en informations de localisation (pays)
+  // Il existe de nombreux services disponibles pour cela, par exemple : GeoNames, OpenStreetMap Nominatim, etc.
+  // Vous devez choisir un service qui répond à vos besoins et obtenir une clé API si nécessaire
+
+  // Exemple : Utiliser GeoNames pour obtenir le nom du pays
+  var geoNamesUrl = "http://api.geonames.org/countryCodeJSON?lat=" + latitude + "&lng=" + longitude + "&username=demo";
+  
+  // Envoyer une requête AJAX au service GeoNames
+  fetch(geoNamesUrl)
+      .then(response => response.json())
+      .then(data => {
+          // Extraire le nom du pays à partir des données de réponse
+          var pays = data.countryName;
+          
+          // Utiliser le nom du pays pour afficher les numéros de secours correspondants ou effectuer d'autres actions nécessaires
+          afficherNumSecoursParPays(pays);
+      })
+      .catch(error => {
+          console.error("Erreur lors de la récupération du pays :", error);
+          // En cas d'erreur, vous pouvez gérer le problème ici
+      });
+}
+
+// Fonction pour afficher les numéros de secours en fonction du pays
+function afficherNumSecoursParPays(pays) {
+  // Implémentez cette fonction comme décrit dans la réponse précédente
+}
