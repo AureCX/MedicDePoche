@@ -3,7 +3,7 @@ var langueNavigateur = navigator.language || navigator.userLanguage;
 
 // Rediriger ou charger dynamiquement le contenu pour la langue détectée
 if (langueNavigateur.startsWith("fr")) {
-    window.location.href = "index_fr.html"; // Redirection vers la version française
+    window.location.href = "index.html"; // Redirection vers la version française
 } else if (langueNavigateur.startsWith("es")) {
     window.location.href = "index_es.html"; // Redirection vers la version espagnole
 } else {
