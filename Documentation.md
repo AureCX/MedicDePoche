@@ -15,6 +15,7 @@ obtenirPositionUtilisateur :  Cette fonction utilise l'API de géolocalisation H
 determinerPaysParCoordonnees : Cette fonction utilise un service tiers (GeoNames) pour convertir les coordonnées géographiques en informations sur le pays. Elle envoie une requête HTTP à l'URL de l'API GeoNames et extrait le nom du pays à partir de la réponse JSON. Elle appelle ensuite afficherNumSecoursParPays avec le nom du pays. En cas d'erreur, elle affiche un message d'erreur dans la console.
 afficherNumSecoursParPays : Cette fonction affiche les numéros de secours pour un pays donné. Elle utilise un switch pour définir les numéros de secours en fonction du pays. Ensuite, elle sélectionne l'élément .modal-content dans le DOM, efface son contenu actuel, et ajoute les numéros de secours dans la modal.
 
+<<<<<<< Updated upstream
 
 
 Envoyer_email:
@@ -39,3 +40,5 @@ Carte de zones cliquables (<map> et <area>) : Cette section définit une carte d
 Embedded Chatbot Configuration : Ce script configure et intègre un chatbot sur la page en utilisant le service Chatbase. Le chatbotId et le domain sont spécifiés pour identifier et charger le chatbot.
 
 
+=======
+>>>>>>> Stashed changes
