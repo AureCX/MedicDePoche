@@ -7,6 +7,7 @@
   <meta name="description" content="Bienvenue sur MedicDePoche3000, votre assistant de blessures chez vous, et partout !">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/jpeg" href="https://www.larousse.fr/encyclopedie/data/images/1009656-Drapeau_de_la_Croix-Rouge.jpg">
+  <script src="https://unpkg.com/i18next@21.8.16/i18next.min.js"></script>
   <style>
     /* CONTAINER BOXED LAYOUT*/
     /* Ultra wide */
@@ -115,7 +116,7 @@
     <span style="font-size: 30px;"><strong>Cliquez où vous avez mal</strong></span>
   </h1>
 
-   <head>
+   <!-- <head>
     <title>Page avec Pop-up</title>
     <script type="text/javascript">
         window.onload = function() {
@@ -128,7 +129,7 @@
             afficherPopup();
         };
     </script>
- </head>
+ </head> -->
 
   <script>
     function openPopup(url) {
@@ -211,6 +212,53 @@
     domain="www.chatbase.co"
     defer>
     </script>
+    <script>
+      // Initialiser i18next
+      i18next.init({
+          lng: 'fr',
+          debug: true,
+          resources: {
+              fr: {
+                  translation: {
+                      "header_title": "MedicDePoche3000",
+                      "home_button": "Accueil",
+                      "important_numbers_button": "Les numéros importants",
+                      "faq_button": "FAQ",
+                      "support_us_button": "Nous supporter",
+                      "modal_close": "Fermer",
+                      "contact_us": "Contactez-nous",
+                      "name_label": "Nom",
+                      "email_label": "Email",
+                      "message_label": "Message",
+                      "send_button": "Envoyer",
+                      "welcome_message": "Bienvenue sur la page FAQ de MedicDePoche3000 ! Ici vous allez pouvoir trouver les réponses à nos questions les plus fréquentes, et si vous ne trouvez pas la réponse, n'hésitez pas à nous envoyer un email en bas de la page !",
+                      "what_is_question": "Qu'est-ce que MedicDePoche3000 ?",
+                      "how_to_use_question": "Comment puis-je utiliser ce site pour obtenir de l'aide en cas d'urgence médicale ?",
+                      "emergency_numbers_question": "Quels sont les numéros d'urgence à composer en cas d'accident ou de problème de santé grave ?",
+                      "minor_injury_question": "Quelles sont les étapes à suivre en cas de blessure légère à la maison ?",
+                      "urgent_medical_signs_question": "Comment puis-je reconnaître les signes d'une situation médicale urgente ?",
+                      "first_aid_kit_question": "Quels sont les équipements de premiers secours essentiels à avoir à la maison ou en voyage ?",
+                      "burn_treatment_question": "Comment puis-je traiter une brûlure mineure à la maison ?",
+                      "severe_bleeding_question": "Que faire en cas de saignement abondant ?",
+                      "heart_attack_stroke_question": "Comment reconnaître et agir en cas de crise cardiaque ou d'accident vasculaire cérébral (AVC) ?",
+                      "food_poisoning_insect_sting_question": "Comment administrer les premiers soins en cas d'intoxication alimentaire ou de piqûre d'insecte ?",
+                      "travel_precautions_question": "Y a-t-il des précautions particulières à prendre en cas de voyage à l'étranger en matière de santé ?",
+                      "prevent_accidents_question": "Comment prévenir les accidents domestiques courants, notamment chez les enfants ?",
+                      "pet_emergency_question": "Que faire en cas d'urgence médicale chez un animal de compagnie ?",
+                      "chat_system_question": "Comment fonctionne le système de chat pour obtenir de l'aide supplémentaire ?",
+                      "contact_support_question": "Comment puis-je contacter l'équipe de support technique ou fournir des commentaires sur le site ?"
+                  }
+              }
+          }
+      }, function(err, t) {
+          // Traduire les éléments de la page
+          document.getElementById('header-title').innerText = i18next.t('header_title');
+          document.getElementById('home-button').innerText = i18next.t('home_button');
+          document.getElementById('important-numbers-button').innerText = i18next.t('important_numbers_button');
+          document.getElementById('faq-button').innerText = i18next.t('faq_button');
+          document.getElementById('support-us-button').innerText = i18next.t('support_us_button');
+      });
+  </script>
     <!-- <script src="animation.js"></script> -->
 </body>
 </html>
