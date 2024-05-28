@@ -9,5 +9,5 @@ Un popup va alors apparaître afin de vous présenter divers symptômes et vous 
 
 Veuillez cependant garder en tête que CE SITE NE REMPLACE PAS LES SERVICES D'URGENCE ET QUE VOUS DEVEZ IMMÉDIATEMENT CONTACTER CES DERNIERS EN CAS DE NÉCESSITÉ, un bouton présentant les numéros d'urgence est situé en haut de la page, sur le bandeau vert
 
-# Comment l'utiliser ?
- C'est très simple : VTFF
+ # Comment l'utiliser ?
+  C'est très simple : VTFF
