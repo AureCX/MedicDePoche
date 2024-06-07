@@ -162,15 +162,141 @@
             
             </head>
           <body>
-            <header class="entete">
-              <h1 class="titre" style="margin: 0;"><span style="font-size: 30px;"><strong>MedicDePoche3000</strong></span></h1>
-              <div class="boutons">
-                <button class="bouton-rectangulaire bouton-espace" title="Retour à la page" onclick="window.location.href='index.html'">Home</button>
-                <button class="bouton-rectangulaire bouton-espace" title="Les numéros à appeler en cas d'urgence" onclick="showEmergencyNumbers()">Les numéros importants</button>
-                <button class="bouton-rectangulaire" title="Questions récurrentes" onclick="window.location.href='FAQ.html'">FAQ</button>
-                <button class="bouton-rectangulaire bouton-espace" title="Pas besoin de l'expliquer" onclick="window.location.href='noussupporter.html'">Nous supporter</button>
-              </div>
-            </header>
+            <body>
+              <header class="entete">
+                <h1 class="titre" style="margin: 0;"><span style="font-size: 30px;"><strong>MedicDePoche3000</strong></span></h1>
+                <nav class="menu-desktop">
+                <div class="boutons">
+                  <button class="bouton-rectangulaire-desktop bouton-espace" title="Retour à la page" onclick="window.location.href='index.html'"><strong>Home</strong></button>
+                  <button class="bouton-rectangulaire-desktop bouton-espace" title="Les numéros à appeler en cas d'urgence" onclick="showEmergencyNumbers()"><strong>Les numéros importants</strong></button>
+                  <button class="bouton-rectangulaire-desktop" title="Questions récurrentes" onclick="window.location.href='FAQ.html'"><strong>FAQ</strong></button>
+                  <button class="bouton-rectangulaire-desktop bouton-espace" title="Pas besoin de l'expliquer" onclick="window.location.href='noussupporter.html'"><strong>Nous supporter</strong></button>
+                </div>
+              </nav>
+              <div class="menu-mobile">
+                  <div class="hamburger" onclick="toggleMenu()">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                  </div>
+                  <nav class="mobile-nav">
+                    <button onclick="window.location.href='index.html'">Home</button>
+                    <button onclick="showEmergencyNumbers()">Les numéros importants</button>
+                    <button onclick="window.location.href='FAQ.html'">FAQ</button>
+                    <button onclick="window.location.href='noussupporter.html'">Nous supporter</button>
+                </nav>
+            </div>
+              </header>
+            <script>  
+            function toggleMenu() {
+                      var mobileNav = document.querySelector('.mobile-nav');
+                      mobileNav.classList.toggle('open');
+                  }
+              function detectDevice() {
+                var userAgent = navigator.userAgent.toLowerCase();
+                if (userAgent.includes("mobile") || userAgent.includes("android") || userAgent.includes("iphone")) {
+                    document.body.classList.add("mobile-version");
+                } else {
+                    document.body.classList.add("desktop-version");
+                }
+            }
+          
+            detectDevice();
+            </script>
+            <style>
+            /* Styles par défaut */
+            body {
+                background-color: #fde9e0;
+            }
+          
+            .entete {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #6cdd9d;
+                color: #fff;
+                padding: 10px;
+                box-sizing: border-box;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100px;
+            }
+          
+            .menu-desktop {
+                display: flex;
+            }
+          
+            .menu-mobile {
+                display: none;
+            }
+          
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+            }
+          
+            .hamburger div {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 4px;
+            }
+          
+            .mobile-nav {
+                display: none;
+                flex-direction: column;
+                background-color: #6cdd9d;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+            }
+          
+            .mobile-nav.open {
+                display: flex;
+            }
+          
+            .mobile-nav button {
+                background-color: #6cdd9d;
+                color: white;
+                border: none;
+                padding: 10px;
+                text-align: left;
+            }
+          
+            /* Styles pour les appareils mobiles */
+            @media (max-width: 768px) {
+                .menu-desktop {
+                    display: none;
+                }
+          
+                .menu-mobile {
+                    display: flex;
+                }
+          
+                body.mobile-version .entete {
+                    flex-direction: column;
+                    height: auto;
+                    padding: 20px;
+                }
+          
+                body.mobile-version .boutons {
+                    display: flex;
+                    flex-direction: column;
+                }
+          
+                body.mobile-version .bouton-rectangulaire {
+                    margin-bottom: 10px;
+                    width: 100%;
+                }
+                .texte {
+                    display: none;
+                }
+            }
+            </style>
 </head>
             <!-- Modal -->
   <div id="myModal" class="modal">
