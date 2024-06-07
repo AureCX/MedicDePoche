@@ -7,7 +7,6 @@
   <meta name="description" content="Bienvenue sur MedicDePoche3000, votre assistant de blessures chez vous, et partout !">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/jpeg" href="https://www.larousse.fr/encyclopedie/data/images/1009656-Drapeau_de_la_Croix-Rouge.jpg">
-  <script src="https://unpkg.com/i18next@21.8.16/i18next.min.js"></script>
   <style>
     /* CONTAINER BOXED LAYOUT*/
     /* Ultra wide */
@@ -33,66 +32,143 @@
     body {
       background-color: #fde9e0; /* Couleur de fond initiale */
     }
-    .button-container {
-      display: flex;
-      justify-content: space-around;
-      width: 80%; /* Largeur fixe */
-      margin: 0 auto; /* Centrer horizontalement */
-    }
-
-    .button {
-      width: 120px; /* Largeur fixe */
-      height: 40px; /* Hauteur fixe */
-    }
-    /* Style du bandeau d'entête */
-    .entete {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Aligner les éléments verticalement au centre */
-  background-color: #6cdd9d;
-  color: #6cdd9d;
-  padding: 10px; /* Ajoute un peu d'espacement autour du texte */
-  box-sizing: border-box; /* Inclut le rembourrage dans la largeur totale */
-  position: fixed; /* Fixe le bandeau en haut de la fenêtre */
-  top: 0; /* Place le bandeau au sommet de la fenêtre */
-  left: 0; /* Aligne le bandeau à gauche de la fenêtre */
-  width: 100%; /*Largeur de 100% pour occuper toute la largeur de la fenêtre */
-  z-index: auto; /* Assure que le bandeau est au-dessus de tout le contenu */
-  height: 100px; /* Hauteur du bandeau */
-}
-
-    /* Style des boutons */
-    .bouton-rectangulaire {
-      background-color: #6cdd9d; /* Couleur de fond */
-      color: #6cdd9d; /* Couleur du texte */
-      padding: 10px 20px; /* Espacement à l'intérieur du bouton */
-      border: none; /* Supprime les bordures */
-      cursor: pointer; /* Curseur de la souris change en main lorsqu'il survole le bouton */
-      text-align: center; /* Centre le texte à l'intérieur du bouton */
-      display: inline-block; /* Permet de spécifier une largeur/hauteur à l'élément */
-      text-decoration: none; /* Supprime le soulignement du texte */
-      font-size: 16px; /* Taille du texte */
-      font-weight: bold; /* Poids de la police en gras */
-      outline: none; /* Supprime la bordure de focus */
-    }
-
-    /* Style pour les espacements entre les boutons */
-    .bouton-espace {
-      margin-right: 10px; /* Ajoute un espacement à droite entre les boutons */
-    }
+    /*entete here */
   </style>
-  
-</head>
-<body>
-  <header class="entete">
-    <h1 class="titre" style="margin: 0;"><span style="font-size: 30px;"><strong>MedicDePoche3000</strong></span></h1>
-    <div class="boutons">
-      <button class="bouton-rectangulaire bouton-espace" title="Retour à la page" onclick="window.location.href='index.html'">Home</button>
-      <button class="bouton-rectangulaire bouton-espace" title="Les numéros à appeler en cas d'urgence" onclick="showEmergencyNumbers()">Les numéros importants</button>
-      <button class="bouton-rectangulaire" title="Questions récurrentes" onclick="window.location.href='FAQ.html'">FAQ</button>
-      <button class="bouton-rectangulaire bouton-espace" title="Pas besoin de l'expliquer" onclick="window.location.href='noussupporter.html'">Nous supporter</button>
-    </div>
-  </header>
+  <body>
+    <header class="entete">
+      <h1 class="titre" style="margin: 0;"><span style="font-size: 30px;"><strong>MedicDePoche3000</strong></span></h1>
+      <nav class="menu-desktop">
+      <div class="boutons">
+        <button class="bouton-rectangulaire-desktop bouton-espace" title="Retour à la page" onclick="window.location.href='index.html'"><strong>Home</strong></button>
+        <button class="bouton-rectangulaire-desktop bouton-espace" title="Les numéros à appeler en cas d'urgence" onclick="showEmergencyNumbers()"><strong>Les numéros importants</strong></button>
+        <button class="bouton-rectangulaire-desktop" title="Questions récurrentes" onclick="window.location.href='FAQ.html'"><strong>FAQ</strong></button>
+        <button class="bouton-rectangulaire-desktop bouton-espace" title="Pas besoin de l'expliquer" onclick="window.location.href='noussupporter.html'"><strong>Nous supporter</strong></button>
+      </div>
+    </nav>
+    <div class="menu-mobile">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="mobile-nav">
+          <button onclick="window.location.href='index.html'">Home</button>
+          <button onclick="showEmergencyNumbers()">Les numéros importants</button>
+          <button onclick="window.location.href='FAQ.html'">FAQ</button>
+          <button onclick="window.location.href='noussupporter.html'">Nous supporter</button>
+      </nav>
+  </div>
+    </header>
+  <script>  
+  function toggleMenu() {
+            var mobileNav = document.querySelector('.mobile-nav');
+            mobileNav.classList.toggle('open');
+        }
+    function detectDevice() {
+      var userAgent = navigator.userAgent.toLowerCase();
+      if (userAgent.includes("mobile") || userAgent.includes("android") || userAgent.includes("iphone")) {
+          document.body.classList.add("mobile-version");
+      } else {
+          document.body.classList.add("desktop-version");
+      }
+  }
+
+  detectDevice();
+  </script>
+  <style>
+  /* Styles par défaut */
+  body {
+      background-color: #fde9e0;
+  }
+
+  .entete {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #6cdd9d;
+      color: #fff;
+      padding: 10px;
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+  }
+
+  .menu-desktop {
+      display: flex;
+  }
+
+  .menu-mobile {
+      display: none;
+  }
+
+  .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+  }
+
+  .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px;
+  }
+
+  .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #6cdd9d;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+  }
+
+  .mobile-nav.open {
+      display: flex;
+  }
+
+  .mobile-nav button {
+      background-color: #6cdd9d;
+      color: white;
+      border: none;
+      padding: 10px;
+      text-align: left;
+  }
+
+  /* Styles pour les appareils mobiles */
+  @media (max-width: 768px) {
+      .menu-desktop {
+          display: none;
+      }
+
+      .menu-mobile {
+          display: flex;
+      }
+
+      body.mobile-version .entete {
+          flex-direction: column;
+          height: auto;
+          padding: 20px;
+      }
+
+      body.mobile-version .boutons {
+          display: flex;
+          flex-direction: column;
+      }
+
+      body.mobile-version .bouton-rectangulaire {
+          margin-bottom: 10px;
+          width: 100%;
+      }
+      .texte {
+          display: none;
+      }
+  }
+  </style>
   
   <img src="Corps.png" alt="image_corps_page_d-accueil" width="300" height="500" class="image-corps" usemap="#corpsMap">
 
@@ -116,7 +192,7 @@
     <span style="font-size: 30px;"><strong>Cliquez où vous avez mal</strong></span>
   </h1>
 
-   <!-- <head>
+   <head>
     <title>Page avec Pop-up</title>
     <script type="text/javascript">
         window.onload = function() {
@@ -129,7 +205,7 @@
             afficherPopup();
         };
     </script>
- </head> -->
+ </head>
 
   <script>
     function openPopup(url) {
@@ -212,53 +288,6 @@
     domain="www.chatbase.co"
     defer>
     </script>
-    <script>
-      // Initialiser i18next
-      i18next.init({
-          lng: 'fr',
-          debug: true,
-          resources: {
-              fr: {
-                  translation: {
-                      "header_title": "MedicDePoche3000",
-                      "home_button": "Accueil",
-                      "important_numbers_button": "Les numéros importants",
-                      "faq_button": "FAQ",
-                      "support_us_button": "Nous supporter",
-                      "modal_close": "Fermer",
-                      "contact_us": "Contactez-nous",
-                      "name_label": "Nom",
-                      "email_label": "Email",
-                      "message_label": "Message",
-                      "send_button": "Envoyer",
-                      "welcome_message": "Bienvenue sur la page FAQ de MedicDePoche3000 ! Ici vous allez pouvoir trouver les réponses à nos questions les plus fréquentes, et si vous ne trouvez pas la réponse, n'hésitez pas à nous envoyer un email en bas de la page !",
-                      "what_is_question": "Qu'est-ce que MedicDePoche3000 ?",
-                      "how_to_use_question": "Comment puis-je utiliser ce site pour obtenir de l'aide en cas d'urgence médicale ?",
-                      "emergency_numbers_question": "Quels sont les numéros d'urgence à composer en cas d'accident ou de problème de santé grave ?",
-                      "minor_injury_question": "Quelles sont les étapes à suivre en cas de blessure légère à la maison ?",
-                      "urgent_medical_signs_question": "Comment puis-je reconnaître les signes d'une situation médicale urgente ?",
-                      "first_aid_kit_question": "Quels sont les équipements de premiers secours essentiels à avoir à la maison ou en voyage ?",
-                      "burn_treatment_question": "Comment puis-je traiter une brûlure mineure à la maison ?",
-                      "severe_bleeding_question": "Que faire en cas de saignement abondant ?",
-                      "heart_attack_stroke_question": "Comment reconnaître et agir en cas de crise cardiaque ou d'accident vasculaire cérébral (AVC) ?",
-                      "food_poisoning_insect_sting_question": "Comment administrer les premiers soins en cas d'intoxication alimentaire ou de piqûre d'insecte ?",
-                      "travel_precautions_question": "Y a-t-il des précautions particulières à prendre en cas de voyage à l'étranger en matière de santé ?",
-                      "prevent_accidents_question": "Comment prévenir les accidents domestiques courants, notamment chez les enfants ?",
-                      "pet_emergency_question": "Que faire en cas d'urgence médicale chez un animal de compagnie ?",
-                      "chat_system_question": "Comment fonctionne le système de chat pour obtenir de l'aide supplémentaire ?",
-                      "contact_support_question": "Comment puis-je contacter l'équipe de support technique ou fournir des commentaires sur le site ?"
-                  }
-              }
-          }
-      }, function(err, t) {
-          // Traduire les éléments de la page
-          document.getElementById('header-title').innerText = i18next.t('header_title');
-          document.getElementById('home-button').innerText = i18next.t('home_button');
-          document.getElementById('important-numbers-button').innerText = i18next.t('important_numbers_button');
-          document.getElementById('faq-button').innerText = i18next.t('faq_button');
-          document.getElementById('support-us-button').innerText = i18next.t('support_us_button');
-      });
-  </script>
     <!-- <script src="animation.js"></script> -->
 </body>
 </html>
