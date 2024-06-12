@@ -102,22 +102,38 @@
 
   .menu-mobile {
       display: none;
-  }
+      position: relative; /* Added to allow absolute positioning of hamburger */
+    }
 
-  .hamburger {
+    .hamburger {
       display: flex;
       flex-direction: column;
       cursor: pointer;
-  }
+      transition: transform 0.3s ease, left 0.3s ease; /* Smooth transition for rotation and position */
+      position: absolute; /* So we can move it left */
+      right: 10px; /* Initial right position */
+    }
 
-  .hamburger div {
+    .hamburger div {
       width: 25px;
       height: 3px;
       background-color: white;
       margin: 4px;
-  }
+      transition: background-color 0.3s ease; /* Smooth transition for background color */
+    }
 
-  .mobile-nav {
+    /* Rotated and moved state */
+    .hamburger.rotated {
+      transform: rotate(90deg);
+      left: 10px; /* New left position */
+      right: auto; /* Override the initial right position */
+    }
+
+    .hamburger.rotated div {
+      background-color: red; /* Optional: Change color when rotated */
+    }
+
+    .mobile-nav {
       display: none;
       flex-direction: column;
       background-color: #6cdd9d;
@@ -125,49 +141,60 @@
       top: 60px;
       left: 0;
       width: 100%;
-  }
+    }
 
-  .mobile-nav.open {
+    .mobile-nav.open {
       display: flex;
-  }
+    }
 
-  .mobile-nav button {
+    .mobile-nav button {
       background-color: #6cdd9d;
       color: white;
       border: none;
       padding: 10px;
       text-align: left;
-  }
+    }
 
-  /* Styles pour les appareils mobiles */
-  @media (max-width: 768px) {
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 100px); /* Full height minus header */
+    }
+
+    .image-corps {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
       .menu-desktop {
-          display: none;
+        display: none;
       }
 
       .menu-mobile {
-          display: flex;
+        display: flex;
       }
 
       body.mobile-version .entete {
-          flex-direction: column;
-          height: auto;
-          padding: 20px;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
       }
 
       body.mobile-version .boutons {
-          display: flex;
-          flex-direction: column;
+        display: flex;
+        flex-direction: column;
       }
 
       body.mobile-version .bouton-rectangulaire {
-          margin-bottom: 10px;
-          width: 100%;
+        margin: 5px 0; /* Adjust spacing for buttons in mobile view */
       }
+    }
       .texte {
           display: none;
       }
-  }
+  
   </style>
   
   <img src="Corps.png" alt="image_corps_page_d-accueil" width="300" height="500" class="image-corps" usemap="#corpsMap">

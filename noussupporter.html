@@ -190,9 +190,11 @@ cursor: pointer;
   </header>
 <script>  
 function toggleMenu() {
-          var mobileNav = document.querySelector('.mobile-nav');
-          mobileNav.classList.toggle('open');
-      }
+      var mobileNav = document.querySelector('.mobile-nav');
+      var hamburger = document.querySelector('.hamburger');
+      mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('rotated');
+    }
   function detectDevice() {
     var userAgent = navigator.userAgent.toLowerCase();
     if (userAgent.includes("mobile") || userAgent.includes("android") || userAgent.includes("iphone")) {
